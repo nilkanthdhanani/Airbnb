@@ -1,0 +1,49 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--border-button);
+
+    .header-div {
+        padding: 8px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            display: flex;
+            
+            a {
+                display: block;
+                min-height: 64px;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    fill: var(--color-black);
+                    transition: 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    svg {
+                        fill: var(--logo-color);
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+}
