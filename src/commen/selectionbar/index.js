@@ -37,70 +37,61 @@ const selectionData = [
 
 export default function Selectionbar() {
     const sliderRef = useRef(null);
-    const [showLeft, setShowLeft] = useState(false);
-    const [showRight, setShowRight] = useState(true);
+    const [showLeftScroll, setShowLeftScroll] = useState(false);
+    const [showRightScroll, setShowRightScroll] = useState(true);
 
-    const checkScrollPosition = () => {
+    const scrollDistance = 200; // You can adjust this value
+
+    const handleScroll = () => {
         const slider = sliderRef.current;
-        if (slider) {
-            // Check if at start
-            setShowLeft(slider.scrollLeft > 0);
+        const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
 
-            // Check if at end
-            setShowRight(slider.scrollLeft + slider.offsetWidth < slider.scrollWidth);
-        }
+        setShowLeftScroll(slider.scrollLeft > 0);
+        setShowRightScroll(slider.scrollLeft < maxScrollLeft);
     };
 
-    const handleScrollLeft = () => {
-        sliderRef.current.scrollBy({ left: -200, behavior: 'smooth' });
+    const scrollLeft = () => {
+        sliderRef.current.scrollBy({ left: -scrollDistance, behavior: 'smooth' });
     };
 
-    const handleScrollRight = () => {
-        sliderRef.current.scrollBy({ left: 200, behavior: 'smooth' });
+    const scrollRight = () => {
+        sliderRef.current.scrollBy({ left: scrollDistance, behavior: 'smooth' });
     };
 
     useEffect(() => {
         const slider = sliderRef.current;
-
-        // Check the scroll position on mount and on scroll
-        if (slider) {
-            checkScrollPosition();
-            slider.addEventListener('scroll', checkScrollPosition);
-        }
-
-        return () => {
-            if (slider) {
-                slider.removeEventListener('scroll', checkScrollPosition);
-            }
-        };
+        slider.addEventListener('scroll', handleScroll);
+        return () => slider.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
         <div className="selectionbar">
             <div className="container">
                 <div className="selection-main">
-                    {showLeft && (
+                    {showLeftScroll && (
                         <div className="left-scroll">
-                            <button type="button" onClick={handleScrollLeft}>
+                            <button type="button" onClick={scrollLeft}>
                                 <LeftScrollIco />
-                            </button>
-                        </div>
-                    )}
-                    {showRight && (
-                        <div className="right-scroll">
-                            <button type="button" onClick={handleScrollRight}>
-                                <RightScrollIco />
                             </button>
                         </div>
                     )}
                     <div className="selection-slider" ref={sliderRef}>
                         {selectionData.map(({ imgSrc, text }, index) => (
-                            <div key={index} className="selection-box">
-                                <img src={imgSrc} alt={text} />
-                                <span>{text}</span>
+                            <div className="slider-box" key={index}>
+                                <div className="selection-box">
+                                    <img src={imgSrc} alt={text} />
+                                    <span>{text}</span>
+                                </div>
                             </div>
                         ))}
                     </div>
+                    {showRightScroll && (
+                        <div className="right-scroll">
+                            <button type="button" onClick={scrollRight}>
+                                <RightScrollIco />
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

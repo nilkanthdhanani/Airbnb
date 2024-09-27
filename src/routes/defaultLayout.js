@@ -7,8 +7,10 @@ import Selectionbar from '../commen/selectionbar'
 export default function DefaultLayout() {
   return (
     <>
-      <Header />
-      <Selectionbar />
+      <div className="header-main">
+        <Header />
+        <Selectionbar />
+      </div>
       <Outlet />
       <Footer />
     </>

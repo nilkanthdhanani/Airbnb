@@ -1,8 +1,4 @@
 .selectionbar {
-    // padding: 12px 0;
-    position: sticky;
-    top: 81px;
-    z-index: 8;
     background-color: var(--color-white);
     box-shadow: rgb(0 0 0 / 16%) 0 0 6px;
 
@@ -16,30 +12,14 @@
         align-items: center;
         position: relative;
 
-        &::before,
-        &::after {
-            position: absolute;
-            top: 0;
-            width: 50px;
-            height: 100%;
-            z-index: 2;
-            content: "";
-        }
-        &::before {
-            left: 0;
-            background: rgb(255, 255, 255);
-            background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%);
-        }
-        &::after {
-            right: 0;
-            background: rgb(255, 255, 255);
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%);
-        }
-
         .left-scroll,
         .right-scroll {
             position: absolute;
             z-index: 9;
+            height: 100%;
+            width: 50px;
+            display: flex;
+            align-items: center;
 
             svg {
                 fill: var(--color-black);
@@ -50,66 +30,78 @@
 
         .left-scroll {
             left: 0;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%);
         }
 
         .right-scroll {
             right: 0;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%);
         }
 
         .selection-slider {
             overflow: auto;
+            white-space: nowrap;
             display: flex;
-            gap: 32px;
+            gap: 35px;
 
-            .selection-box {
-                margin: 12px 0 10px 0;
-                padding: 4px 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 8px;
-                position: relative;
-                opacity: 0.6;
-                transition: 0.2s ease-in-out;
-                cursor: pointer;
+            .slider-box {
+                // width: max-content;
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    height: 2px;
-                    width: 100%;
-                    bottom: -9px;
-                    background-color: var(--border-button);
-                    opacity: 0;
-                }
-
-                img {
-                    width: 24px;
-                }
-
-                span {
-                    display: block;
-                    font-size: 12px;
-                    color: var(--color-black);
-                    font-weight: 500;
-                    line-height: 1rem;
-                }
-
-                &:hover {
-                    opacity: 1;
+                .selection-box {
+                    // width: max-content;
+                    margin: 12px 0 10px 0;
+                    padding: 4px 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 8px;
+                    position: relative;
+                    opacity: 0.6;
+                    transition: 0.2s ease-in-out;
+                    cursor: pointer;
 
                     &::after {
+                        content: "";
+                        position: absolute;
+                        height: 2px;
+                        width: 100%;
+                        bottom: -10px;
+                        background-color: var(--border-button);
+                        opacity: 0;
+                    }
+
+                    img {
+                        width: 24px;
+                    }
+
+                    span {
+                        display: block;
+                        font-size: 12px;
+                        color: var(--color-black);
+                        font-weight: 500;
+                        line-height: 1rem;
+                    }
+
+                    &:hover {
                         opacity: 1;
-                        transition: 0.2s ease-in-out;
+
+                        &::after {
+                            opacity: 1;
+                            transition: 0.2s ease-in-out;
+                        }
                     }
                 }
 
-                &:nth-child(2) {
-                    opacity: 1;
-
-                    &::after {
+                &:first-child {
+                    .selection-box {
                         opacity: 1;
-                        background-color: var(--color-black);
+
+                        &::after {
+                            opacity: 1;
+                            background-color: var(--color-black);
+                        }
                     }
                 }
             }
