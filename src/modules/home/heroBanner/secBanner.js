@@ -96,23 +96,26 @@ export default function SecBanner() {
   return (
     <section>
       <div className="container">
-        <div className="main-block">
-          {renderBlockDiv(oneImages, oneIndex, setOneIndex, 'one', 'Live like Bollywood star Janhvi Kapoor', 'Hosted by Janhvi Kapoor', 'Sold Out')}
-          {renderBlockDiv(twoImages, twoIndex, setTwoIndex, 'two', 'Open the Olympic Games at Musée d’Orsay', 'Hosted by Mathieu Lehanneur', 'Sold Out')}
-          {renderBlockDiv(threeImages, threeIndex, setThreeIndex, 'three', 'Wake up in the Musée d’Orsay', 'Hosted by Mathieu Lehanneur', 'Sold Out')}
-          {renderBlockDiv(fourImages, fourIndex, setFourIndex, 'four', 'Make core memories with Inside Out 2', 'Hosted by Joy', 'Sold Out')}
-          {renderBlockDiv(fiveImages, fiveIndex, setFiveIndex, 'five', 'Design your Incredibles Supersuit', 'Hosted by Edna Mode', 'Sold Out')}
-          {renderBlockDiv(sixImages, sixIndex, setSixIndex, 'six', 'Go on tour with Feid', 'Hosted by Feid', 'Sold Out')}
-          {renderBlockDiv(sevenImages, sevenIndex, setSevenIndex, 'seven', 'Game with Khaby Lame', 'Hosted by Khaby Lame', 'Sold Out')}
-          {renderBlockDiv(eightImages, eightIndex, setEightIndex, 'eight', 'Crash at the X-Mansion', 'Hosted by Jubilee', 'Sold Out')}
-          {renderBlockDiv(nineImages, nineIndex, setNineIndex, 'nine', 'Spend the night in the Ferrari Museum', 'Hosted by Marc Gené', 'Sold Out')}
-          {renderBlockDiv(tenImages, tenIndex, setTenIndex, 'ten', 'Drift off in the Up house', 'Hosted by Carl Fredricksen', 'Sold Out')}
-          {renderBlockDiv(elevenImages, elevenIndex, setElevenIndex, 'eleven', 'Shrek’s Swamp', 'Hosted by Donkey', 'Sold Out')}
-          {renderBlockDiv(twelveImages, twelveIndex, setTwelveIndex, 'twelve', 'Barbie’s Malibu DreamHouse, Ken’s Way', 'Hosted by Ken', 'Sold Out')}
-          {renderBlockDiv(thirteenImages, thirteenIndex, setThirteenIndex, 'thirteen', 'Ted Lasso’s Favorite Pub', 'Hosted by Mae', 'Sold Out')}
-          {renderBlockDiv(fourteenImages, fourteenIndex, setFourteenIndex, 'fourteen', 'Houseplant Retreat', 'Hosted by Seth Rogen', 'Sold Out')}
-          {renderBlockDiv(fifteenImages, fifteenIndex, setFifteenIndex, 'fifteen', 'Home Alone Holiday', 'Hosted by Buzz', 'Sold Out')}
-          {renderBlockDiv(sixteenImages, sixteenIndex, setSixteenIndex, 'sixteen', 'The Last Blockbuster', 'Hosted by Sandi', 'Sold Out')}
+        <div className="past-expireance">
+          <h2>Past experiences</h2>
+          <div className="main-block">
+            {renderBlockDiv(oneImages, oneIndex, setOneIndex, 'one', 'Live like Bollywood star Janhvi Kapoor', 'Hosted by Janhvi Kapoor', 'Sold Out')}
+            {renderBlockDiv(twoImages, twoIndex, setTwoIndex, 'two', 'Open the Olympic Games at Musée d’Orsay', 'Hosted by Mathieu Lehanneur', 'Sold Out')}
+            {renderBlockDiv(threeImages, threeIndex, setThreeIndex, 'three', 'Wake up in the Musée d’Orsay', 'Hosted by Mathieu Lehanneur', 'Sold Out')}
+            {renderBlockDiv(fourImages, fourIndex, setFourIndex, 'four', 'Make core memories with Inside Out 2', 'Hosted by Joy', 'Sold Out')}
+            {renderBlockDiv(fiveImages, fiveIndex, setFiveIndex, 'five', 'Design your Incredibles Supersuit', 'Hosted by Edna Mode', 'Sold Out')}
+            {renderBlockDiv(sixImages, sixIndex, setSixIndex, 'six', 'Go on tour with Feid', 'Hosted by Feid', 'Sold Out')}
+            {renderBlockDiv(sevenImages, sevenIndex, setSevenIndex, 'seven', 'Game with Khaby Lame', 'Hosted by Khaby Lame', 'Sold Out')}
+            {renderBlockDiv(eightImages, eightIndex, setEightIndex, 'eight', 'Crash at the X-Mansion', 'Hosted by Jubilee', 'Sold Out')}
+            {renderBlockDiv(nineImages, nineIndex, setNineIndex, 'nine', 'Spend the night in the Ferrari Museum', 'Hosted by Marc Gené', 'Sold Out')}
+            {renderBlockDiv(tenImages, tenIndex, setTenIndex, 'ten', 'Drift off in the Up house', 'Hosted by Carl Fredricksen', 'Sold Out')}
+            {renderBlockDiv(elevenImages, elevenIndex, setElevenIndex, 'eleven', 'Shrek’s Swamp', 'Hosted by Donkey', 'Sold Out')}
+            {renderBlockDiv(twelveImages, twelveIndex, setTwelveIndex, 'twelve', 'Barbie’s Malibu DreamHouse, Ken’s Way', 'Hosted by Ken', 'Sold Out')}
+            {renderBlockDiv(thirteenImages, thirteenIndex, setThirteenIndex, 'thirteen', 'Ted Lasso’s Favorite Pub', 'Hosted by Mae', 'Sold Out')}
+            {renderBlockDiv(fourteenImages, fourteenIndex, setFourteenIndex, 'fourteen', 'Houseplant Retreat', 'Hosted by Seth Rogen', 'Sold Out')}
+            {renderBlockDiv(fifteenImages, fifteenIndex, setFifteenIndex, 'fifteen', 'Home Alone Holiday', 'Hosted by Buzz', 'Sold Out')}
+            {renderBlockDiv(sixteenImages, sixteenIndex, setSixteenIndex, 'sixteen', 'The Last Blockbuster', 'Hosted by Sandi', 'Sold Out')}
+          </div>
         </div>
       </div>
     </section>

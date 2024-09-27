@@ -4,6 +4,7 @@
     h2 {
         margin-bottom: 25px;
         @include pastHead;
+        color: var(--font-color);
     }
 }
 .main-block {
