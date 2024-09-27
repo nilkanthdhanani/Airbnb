@@ -3,7 +3,7 @@ import '../footer.scss';
 import DropIco from '../../../assets/images/svg/dropIco';
 
 const popularDestinations = [
-  { city: "Canmore", type: "Flat rentals" },
+  { city: "Beach", type: "Flat rentals" },
   { city: "Benalmádena", type: "Beach house rentals" },
   { city: "Marbella", type: "Beach house rentals" },
   { city: "Mijas", type: "House rentals" },

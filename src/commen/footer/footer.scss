@@ -1,86 +1,86 @@
 @import "../../styles/typography/typography";
 
 footer {
-    background-color: var(--bg-button-hover);
+  background-color: var(--bg-button-hover);
 
-    .inspiration {
-        padding: 48px 0;
-        border-bottom: 1px solid var(--border-button);
+  .inspiration {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border-button);
 
-        h2 {
-            margin-bottom: 8px;
-            @include footerHead;
-        }
-
-        .inspiration-select {
-            display: flex;
-            gap: 26px;
-            border-bottom: 1px solid var(--border-button);
-
-            .inspiration-select-box {
-                padding: 16px 0;
-                cursor: pointer;
-                position: relative;
-
-                span {
-                    @include homeButton;
-                    color: var(--font-color2);
-                }
-
-                &:first-child {
-                    span {
-                        color: var(--font-color);
-                    }
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        height: 2px;
-                        width: 100%;
-                        left: 0;
-                        bottom: 0;
-                        background-color: var(--font-color);
-                    }
-                }
-            }
-        }
-
-        .inspier-inner {
-            padding-top: 38px;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 24px 8px;
-
-            .inspier-inner-box {
-                h3 {
-                    @include homeButton;
-                    color: var(--font-color);
-                }
-
-                p {
-                    @include homeButton;
-                    font-weight: 400;
-                    color: var(--font-color2);
-                }
-            }
-
-            .Show-more {
-                display: flex;
-                gap: 5px;
-                align-items: center;
-                cursor: pointer;
-
-                h3 {
-                    @include homeButton;
-                    color: var(--font-color);
-                }
-
-                svg {
-                    width: 12px;
-                    stroke-width: 5px;
-                    stroke: var(--font-color);
-                }
-            }
-        }
+    h2 {
+      margin-bottom: 8px;
+      @include footerHead;
     }
+
+    .inspiration-select {
+      display: flex;
+      gap: 26px;
+      border-bottom: 1px solid var(--border-button);
+
+      .inspiration-select-box {
+        padding: 16px 0;
+        cursor: pointer;
+        position: relative;
+
+        span {
+          @include homeButton;
+          color: var(--font-color2);
+        }
+
+        &.active {
+          span {
+            color: var(--font-color); // Active color
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            background-color: var(--font-color); // Active underline
+          }
+        }
+      }
+    }
+
+    .inspier-inner {
+      padding-top: 38px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 24px 8px;
+
+      .inspier-inner-box {
+        h3 {
+          @include homeButton;
+          color: var(--font-color);
+        }
+
+        p {
+          @include homeButton;
+          font-weight: 400;
+          color: var(--font-color2);
+        }
+      }
+
+      .Show-more {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        cursor: pointer;
+
+        h3 {
+          @include homeButton;
+          color: var(--font-color);
+        }
+
+        svg {
+          width: 12px;
+          stroke-width: 5px;
+          stroke: var(--font-color);
+        }
+      }
+    }
+  }
 }

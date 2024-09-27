@@ -12,6 +12,17 @@ import ThingsToDo from './thingsToDo';
 export default function Inspiration() {
   const [selectedCategory, setSelectedCategory] = useState('Popular'); // Default to 'Popular'
 
+  const categories = [
+    'Popular',
+    'Arts & culture',
+    'Outdoors',
+    'Mountains',
+    'Beach',
+    'Unique stays',
+    'Categories',
+    'Things to do'
+  ];
+
   const renderSelectedCategory = () => {
     switch (selectedCategory) {
       case 'Popular':
@@ -40,31 +51,18 @@ export default function Inspiration() {
       <div className="container">
         <h2>Inspiration for future getaways</h2>
         <div className="inspiration-select">
-          <div className="inspiration-select-box" onClick={() => setSelectedCategory('Popular')}>
-            <span>Popular</span>
-          </div>
-          <div className="inspiration-select-box" onClick={() => setSelectedCategory('Arts & culture')}>
-            <span>Arts & culture</span>
-          </div>
-          <div className="inspiration-select-box" onClick={() => setSelectedCategory('Outdoors')}>
-            <span>Outdoors</span>
-          </div>
-          <div className="inspiration-select-box" onClick={() => setSelectedCategory('Mountains')}>
-            <span>Mountains</span>
-          </div>
-          <div className="inspiration-select-box" onClick={() => setSelectedCategory('Beach')}>
-            <span>Beach</span>
-          </div>
-          <div className="inspiration-select-box" onClick={() => setSelectedCategory('Unique stays')}>
-            <span>Unique stays</span>
-          </div>
-          <div className="inspiration-select-box" onClick={() => setSelectedCategory('Categories')}>
-            <span>Categories</span>
-          </div>
-          <div className="inspiration-select-box" onClick={() => setSelectedCategory('Things to do')}>
-            <span>Things to do</span>
-          </div>
+          {categories.map((category) => (
+            <div
+              key={category}
+              className={`inspiration-select-box ${selectedCategory === category ? 'active' : ''}`}
+              onClick={() => setSelectedCategory(category)}
+            >
+              <span>{category}</span>
+            </div>
+          ))}
         </div>
+
+        {/* Render the selected category component */}
         {renderSelectedCategory()}
       </div>
     </div>
