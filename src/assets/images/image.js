@@ -57,8 +57,75 @@ import polly10 from './png/polly10.png';
 import polly11 from './png/polly11.png';
 import polly12 from './png/polly12.png';
 
+import one1 from './card/one/1.webp';
+import one2 from './card/one/1.1.webp';
+import one3 from './card/one/1.2.webp';
+import one4 from './card/one/1.3.webp';
+import two from './card/two/2.webp';
+import two2 from './card/two/2.1.webp';
+import two3 from './card/two/2.2.webp';
+import two4 from './card/two/2.3.webp';
+import three1 from './card/three/3.webp';
+import three2 from './card/three/3.1.webp';
+import three3 from './card/three/3.2.webp';
+import three4 from './card/three/3.3.webp';
+import four1 from './card/four/4.webp';
+import four2 from './card/four/4.1.webp';
+import four3 from './card/four/4.2.webp';
+import four4 from './card/four/4.3.jpeg';
+import five1 from './card/five/5.jpeg';
+import five2 from './card/five/5.1.webp';
+import five3 from './card/five/5.2.webp';
+import five4 from './card/five/5.3.jpeg';
+import six1 from './card/six/6.webp';
+import six2 from './card/six/6.1.webp';
+import six3 from './card/six/6.2.webp';
+import six4 from './card/six/6.3.webp';
+import seven1 from './card/seven/7.webp';
+import seven2 from './card/seven/7.1.jpeg';
+import seven3 from './card/seven/7.2.jpeg';
+import seven4 from './card/seven/7.3.jpeg';
+import eight1 from './card/eight/8.webp';
+import eight2 from './card/eight/8.1.webp';
+import eight3 from './card/eight/8.2.webp';
+import eight4 from './card/eight/8.3.webp';
+import nine1 from './card/nine/9.jfif';
+import nine2 from './card/nine/9.1.jfif';
+import nine3 from './card/nine/9.2.webp';
+import nine4 from './card/nine/9.3.webp';
+import ten1 from './card/ten/10.jpeg';
+import ten2 from './card/ten/10.1.jpeg';
+import ten3 from './card/ten/10.2.jpeg';
+import ten4 from './card/ten/10.3.jpeg';
+import eleven1 from './card/eleven/11.jpeg';
+import eleven2 from './card/eleven/11.1.jpeg';
+import eleven3 from './card/eleven/11.2.jpeg';
+import eleven4 from './card/eleven/11.3.jpeg';
+import twelve1 from './card/twelve/12.jpeg';
+import twelve2 from './card/twelve/12.1.jpeg';
+import twelve3 from './card/twelve/12.2.jpeg';
+import twelve4 from './card/twelve/12.3.jpeg';
+import thirteen1 from './card/thirteen/13.jpeg';
+import thirteen2 from './card/thirteen/13.1.jpeg';
+import thirteen3 from './card/thirteen/13.2.jpeg';
+import thirteen4 from './card/thirteen/13.3.jpeg';
+import fourteen1 from './card/fourteen/14.jpeg';
+import fourteen2 from './card/fourteen/14.1.jpeg';
+import fourteen3 from './card/fourteen/14.2.jpeg';
+import fourteen4 from './card/fourteen/14.3.jpeg';
+import fifteen1 from './card/fifteen/15.jpeg';
+import fifteen2 from './card/fifteen/15.1.jpeg';
+import fifteen3 from './card/fifteen/15.2.jpeg';
+import fifteen4 from './card/fifteen/15.3.jpeg';
+import sixteen1 from './card/sixteen/16.jpg';
+import sixteen2 from './card/sixteen/16.1.jpg';
+import sixteen3 from './card/sixteen/16.2.jpg';
+import sixteen4 from './card/sixteen/16.3.jpeg';
+
 export {
   views, pools, farms, islands, caves, omg, luxe, castles, beachfront, cabins, rooms, tinyHomes, topWorld, mainBlock6, past1, past2, past3, past4, past6, past7, past8, past9, past10, past11, past12, past13, past14, past15, past16, past5, kevin1, kevin2, kevin3, kevin4, train1, train2, train3, train4,
 
   icons, mainBlock1, mainBlock2, mainBlock3, mainBlock4, mainBlock5, polly1, polly2, polly3, polly4, polly5, polly6, polly7, polly8, polly9, polly10, polly11, polly12,
+  
+  one1, one2, one3, one4, two, two2, two3, two4, three1, three2, three3, three4, four1, four2, four3, four4, five1, five2, five3, five4, six1, six2, six3, six4, seven1, seven2, seven3, seven4, eight1, eight2, eight3, eight4, nine1, nine2, nine3, nine4, ten1, ten2, ten3, ten4, eleven1, eleven2, eleven3, eleven4, twelve1, twelve2, twelve3, twelve4, thirteen1, thirteen2, thirteen3, thirteen4, fourteen1, fourteen2, fourteen3, fourteen4, fifteen1, fifteen2, fifteen3, fifteen4, sixteen1, sixteen2, sixteen3, sixteen4,
 };

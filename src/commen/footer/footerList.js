@@ -9,7 +9,7 @@ import InstagramIco from '../../assets/images/svg/instagramIco'
 export default function FooterList() {
     return (
         <div className='footer-list'>
-            <div className="container">
+            <div className="container-footer">
                 <div className="footer-list-link">
                     <div className="footer-link-box">
                         <h3>Support</h3>

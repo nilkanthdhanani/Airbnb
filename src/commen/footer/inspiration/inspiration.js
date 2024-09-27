@@ -48,7 +48,7 @@ export default function Inspiration() {
 
   return (
     <div className='inspiration'>
-      <div className="container">
+      <div className="container-footer">
         <h2>Inspiration for future getaways</h2>
         <div className="inspiration-select">
           {categories.map((category) => (

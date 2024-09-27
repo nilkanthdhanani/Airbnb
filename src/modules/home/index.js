@@ -1,12 +1,12 @@
 import React from 'react'
 import HeroBanner from './heroBanner'
-import PastExperiance from './heroBanner/pastExpireance'
+import SecBanner from './heroBanner/secBanner'
 
 export default function Home() {
   return (
     <main>
       <HeroBanner />
-      <PastExperiance />
+      <SecBanner />
     </main>
   )
 }
