@@ -1,86 +1,201 @@
 @import "../../styles/typography/typography";
 
 footer {
-  background-color: var(--bg-button-hover);
+    background-color: var(--bg-button-hover);
 
-  .inspiration {
-    padding: 48px 0;
-    border-bottom: 1px solid var(--border-button);
+    .inspiration {
+        padding: 48px 0;
+        border-bottom: 1px solid var(--border-button);
 
-    h2 {
-      margin-bottom: 8px;
-      @include footerHead;
+        h2 {
+            margin-bottom: 8px;
+            @include footerHead;
+        }
+
+        .inspiration-select {
+            display: flex;
+            gap: 26px;
+            border-bottom: 1px solid var(--border-button);
+
+            .inspiration-select-box {
+                padding: 16px 0;
+                cursor: pointer;
+                position: relative;
+
+                span {
+                    @include homeButton;
+                    color: var(--font-color2);
+                }
+
+                &.active {
+                    span {
+                        color: var(--font-color);
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        height: 2px;
+                        width: 100%;
+                        left: 0;
+                        bottom: 0;
+                        background-color: var(--font-color);
+                    }
+                }
+            }
+        }
+
+        .inspier-inner {
+            padding-top: 38px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 24px 8px;
+
+            .inspier-inner-box {
+                h3 {
+                    @include homeButton;
+                    color: var(--font-color);
+                }
+
+                p {
+                    @include homeButton;
+                    font-weight: 400;
+                    color: var(--font-color2);
+                }
+            }
+
+            .Show-more {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                cursor: pointer;
+
+                h3 {
+                    @include homeButton;
+                    color: var(--font-color);
+                }
+
+                svg {
+                    width: 12px;
+                    stroke-width: 5px;
+                    stroke: var(--font-color);
+                }
+            }
+        }
     }
 
-    .inspiration-select {
-      display: flex;
-      gap: 26px;
-      border-bottom: 1px solid var(--border-button);
+    .footer-list {
+        .footer-list-link {
+            padding: 48px 0;
+            border-bottom: 1px solid var(--border-button);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
 
-      .inspiration-select-box {
-        padding: 16px 0;
-        cursor: pointer;
-        position: relative;
+            .footer-link-box {
+                h3 {
+                    @include homeButton;
+                    color: var(--font-color);
+                    margin-bottom: 12px;
+                }
 
-        span {
-          @include homeButton;
-          color: var(--font-color2);
+                a {
+                    display: block;
+                    margin-bottom: 12px;
+                    @include homeButton;
+                    font-weight: 400;
+                    line-height: 20px;
+                    color: var(--font-color);
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &:hover {
+                        text-decoration-line: underline;
+                    }
+                }
+            }
         }
 
-        &.active {
-          span {
-            color: var(--font-color); // Active color
-          }
+        .footer-list-copy {
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-          &::after {
-            content: "";
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            left: 0;
-            bottom: 0;
-            background-color: var(--font-color); // Active underline
-          }
+            .footer-copy-div {
+                display: flex;
+                align-items: center;
+
+                p {
+                    @include homeButton;
+                    font-weight: 400;
+                    color: var(--font-color);
+                }
+
+                a {
+                    display: block;
+                    @include homeButton;
+                    font-weight: 400;
+                    color: var(--font-color);
+
+                    &:hover {
+                        text-decoration-line: underline;
+                    }
+                }
+
+                span {
+                    padding: 0 8px;
+                    line-height: 18px;
+                }
+            }
+
+            .footer-copy-div2 {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+
+                .footer-leg {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                        margin-right: 8px;
+                    }
+
+                    span {
+                        @include font16;
+                        cursor: pointer;
+                        margin-right: 5px;
+                    }
+
+                    a {
+                        @include homeButton;
+                        color: var(--font-color);
+
+                        &:hover {
+                            text-decoration-line: underline;
+                        }
+                    }
+                }
+
+                .footer-media {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    a {
+                        height: 18px;
+
+                        svg {
+                            width: 18px;
+                        }
+                    }
+                }
+            }
         }
-      }
     }
-
-    .inspier-inner {
-      padding-top: 38px;
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 24px 8px;
-
-      .inspier-inner-box {
-        h3 {
-          @include homeButton;
-          color: var(--font-color);
-        }
-
-        p {
-          @include homeButton;
-          font-weight: 400;
-          color: var(--font-color2);
-        }
-      }
-
-      .Show-more {
-        display: flex;
-        gap: 5px;
-        align-items: center;
-        cursor: pointer;
-
-        h3 {
-          @include homeButton;
-          color: var(--font-color);
-        }
-
-        svg {
-          width: 12px;
-          stroke-width: 5px;
-          stroke: var(--font-color);
-        }
-      }
-    }
-  }
 }

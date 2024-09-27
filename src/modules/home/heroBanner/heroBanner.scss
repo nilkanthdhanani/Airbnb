@@ -9,8 +9,20 @@
 .main-block {
     margin: 16px 0 52px 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 40px 24px;
+
+    @media (max-width: 1880px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media (max-width: 1640px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 1128px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     .block-div {
         .block-div-image {
@@ -47,7 +59,6 @@
 
                 &:hover {
                     background-color: var(--color-white);
-                    transform: scale(1.01);
                     transition: 0.3s ease-in-out;
                 }
             }

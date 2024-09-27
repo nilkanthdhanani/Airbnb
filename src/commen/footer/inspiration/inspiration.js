@@ -10,8 +10,8 @@ import Categories from './categories';
 import ThingsToDo from './thingsToDo';
 
 export default function Inspiration() {
-  const [selectedCategory, setSelectedCategory] = useState('Popular'); // Default to 'Popular'
-
+  const [selectedCategory, setSelectedCategory] = useState('Popular');
+  
   const categories = [
     'Popular',
     'Arts & culture',
@@ -61,8 +61,6 @@ export default function Inspiration() {
             </div>
           ))}
         </div>
-
-        {/* Render the selected category component */}
         {renderSelectedCategory()}
       </div>
     </div>
