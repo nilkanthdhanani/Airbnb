@@ -29,9 +29,9 @@ export default function HeroBanner() {
               </div>
             </div>
             <div className="block-div-text">
-              <h3>Stay in Prince’s Purple Rain house</h3>
-              <p>Hosted by Wendy and Lisa</p>
-              <span>Coming September</span>
+              <h3>Join a living room session with Doja</h3>
+              <p>Hosted by Doja CatHosted by Doja Cat</p>
+              <span>Coming October</span>
             </div>
           </div>
           <div className="block-div">
@@ -42,9 +42,9 @@ export default function HeroBanner() {
               </div>
             </div>
             <div className="block-div-text">
-              <h3>Stay in Prince’s Purple Rain house</h3>
-              <p>Hosted by Wendy and Lisa</p>
-              <span>Coming September</span>
+              <h3>Sleepover at Polly Pocket’s Compact</h3>
+              <p>Hosted by Polly Pocket</p>
+              <span>Sold Out</span>
             </div>
           </div>
           <div className="block-div">
@@ -55,9 +55,9 @@ export default function HeroBanner() {
               </div>
             </div>
             <div className="block-div-text">
-              <h3>Stay in Prince’s Purple Rain house</h3>
-              <p>Hosted by Wendy and Lisa</p>
-              <span>Coming September</span>
+              <h3>Playdate at Polly Pocket’s Compact</h3>
+              <p>Hosted by Polly Pocket</p>
+              <span>Sold Out</span>
             </div>
           </div>
           <div className="block-div">
@@ -68,9 +68,9 @@ export default function HeroBanner() {
               </div>
             </div>
             <div className="block-div-text">
-              <h3>Stay in Prince’s Purple Rain house</h3>
-              <p>Hosted by Wendy and Lisa</p>
-              <span>Coming September</span>
+              <h3>Go VIP with Kevin Hart</h3>
+              <p>Hosted by Kevin Hart</p>
+              <span>Sold Out</span>
             </div>
           </div>
           <div className="block-div">
@@ -81,9 +81,9 @@ export default function HeroBanner() {
               </div>
             </div>
             <div className="block-div-text">
-              <h3>Stay in Prince’s Purple Rain house</h3>
-              <p>Hosted by Wendy and Lisa</p>
-              <span>Coming September</span>
+              <h3>Train at the X-Mansion</h3>
+              <p>Hosted by Jubilee</p>
+              <span>Sold Out</span>
             </div>
           </div>
         </div>

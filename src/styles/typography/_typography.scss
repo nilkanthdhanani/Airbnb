@@ -1,9 +1,26 @@
 
 
 
+@mixin font12 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
 @mixin font14 {
     font-size: 14px;
     font-weight: 600;
+}
+
+@mixin homeButton {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.125rem;
+}
+
+@mixin font15 {
+    font-size: 15px;
+    line-height: 19px;
 }
 
 @mixin font16 {
@@ -11,15 +28,32 @@
     font-weight: 400;
 }
 
+@mixin font16Line {
+    font-size: 16px;
+    line-height: 1.5rem;
+}
+
 @mixin font20 {
     font-size: 20px;
     font-weight: 400;
+}
+
+@mixin footerHead {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
 }
 
 @mixin font32 {
     font-size: 32px;
     font-weight: 600;
     line-height: 1.2;
+}
+
+@mixin pastHead {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 36px;
 }
 
 @mixin font160 {
