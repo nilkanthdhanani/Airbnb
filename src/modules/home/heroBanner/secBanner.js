@@ -12,7 +12,7 @@ const playImages = [polly2, polly3, polly4, polly5];
 const kevinImages = [kevin1, kevin2, kevin3, kevin4];
 const trainImages = [train1, train2, train3, train4];
 
-export default function HeroBanner() {
+export default function SecBanner() {
   const [pollyIndex, setPollyIndex] = useState(0);
   const [playIndex, setPlayIndex] = useState(0);
   const [kevinIndex, setKevinIndex] = useState(0);
@@ -37,34 +37,7 @@ export default function HeroBanner() {
     <section>
       <div className="container">
         <div className="main-block">
-          <div className="block-div">
-            <div className="block-div-image">
-              <img src={mainBlock1} alt="mainBlock1" />
-              <div className="upload">
-                <UploadIco />
-              </div>
-            </div>
-            <div className="block-div-text">
-              <h3>Stay in Prince’s Purple Rain house</h3>
-              <p>Hosted by Wendy and Lisa</p>
-              <span>Coming September</span>
-            </div>
-          </div>
-          <div className="block-div">
-            <div className="block-div-image">
-              <img src={mainBlock2} alt="mainBlock2" />
-              <div className="upload">
-                <UploadIco />
-              </div>
-            </div>
-            <div className="block-div-text">
-              <h3>Join a living room session with Doja</h3>
-              <p>Hosted by Doja Cat</p>
-              <span>Coming October</span>
-            </div>
-          </div>
-
-          {/* Polly Pocket Section */}
+          {/* Janhvi Kapoor */}
           <div className="block-div">
             <div className={`block-div-image slide-${direction}`}>
               <img src={pollyImages[pollyIndex]} alt={`polly${pollyIndex + 1}`} />

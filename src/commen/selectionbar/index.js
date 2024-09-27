@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './selectionbar.scss';
 import { beachfront, cabins, castles, caves, farms, icons, islands, luxe, omg, pools, rooms, tinyHomes, topWorld, views } from '../../assets/images/image';
-import RightScrollIco from '../../assets/images/svg/rightScrollIco copy';
+import RightScrollIco from '../../assets/images/svg/rightScrollIco';
 import LeftScrollIco from '../../assets/images/svg/leftScrollIco';
 
 const selectionData = [

@@ -26,8 +26,8 @@
 
     .block-div {
         .block-div-image {
-            margin-bottom: 12px;
             position: relative;
+            cursor: pointer;
 
             img {
                 border-radius: 12px;
@@ -62,9 +62,64 @@
                     transition: 0.3s ease-in-out;
                 }
             }
+
+            .left-scroll,
+            .right-scroll {
+                position: absolute;
+                z-index: 9;
+                top: calc(50% - 16px);
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+
+                svg {
+                    fill: var(--color-black);
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            .left-scroll {
+                left: 10px;
+            }
+
+            .right-scroll {
+                right: 10px;
+            }
+
+            .track-dots {
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                gap: 5px;
+
+                .dot {
+                    width: 5px;
+                    height: 5px;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    border-radius: 50%;
+                    transition: background-color 0.3s ease;
+
+                    &.active {
+                        background-color: white;
+                    }
+                }
+            }
+
+            &:hover {
+                .left-scroll,
+                .right-scroll {
+                    opacity: 1;
+                    transition: 0.3s ease-in-out;
+                }
+            }
         }
 
         .block-div-text {
+            margin-top: 12px;
+
             h3 {
                 @include font15;
                 font-weight: 500;
