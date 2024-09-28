@@ -39,8 +39,11 @@ export default function Selectionbar() {
     const sliderRef = useRef(null);
     const [showLeftScroll, setShowLeftScroll] = useState(false);
     const [showRightScroll, setShowRightScroll] = useState(true);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
 
-    const scrollDistance = 200; // You can adjust this value
+    const scrollDistance = 200;
 
     const handleScroll = () => {
         const slider = sliderRef.current;
@@ -50,12 +53,55 @@ export default function Selectionbar() {
         setShowRightScroll(slider.scrollLeft < maxScrollLeft);
     };
 
-    const scrollLeft = () => {
+    const scrollLeftBtn = () => {
         sliderRef.current.scrollBy({ left: -scrollDistance, behavior: 'smooth' });
     };
 
-    const scrollRight = () => {
+    const scrollRightBtn = () => {
         sliderRef.current.scrollBy({ left: scrollDistance, behavior: 'smooth' });
+    };
+
+    const handleMouseDown = (e) => {
+        const slider = sliderRef.current;
+        setIsDragging(true);
+        setStartX(e.pageX - slider.offsetLeft);
+        setScrollLeft(slider.scrollLeft);
+        slider.classList.add('dragging');
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        const slider = sliderRef.current;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1;
+        slider.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+        sliderRef.current.classList.remove('dragging');
+    };
+
+    const handleTouchStart = (e) => {
+        const slider = sliderRef.current;
+        setIsDragging(true);
+        setStartX(e.touches[0].pageX - slider.offsetLeft);
+        setScrollLeft(slider.scrollLeft);
+        slider.classList.add('dragging');
+    };
+
+    const handleTouchMove = (e) => {
+        if (!isDragging) return;
+        const slider = sliderRef.current;
+        const x = e.touches[0].pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1;
+        slider.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleTouchEnd = () => {
+        setIsDragging(false);
+        sliderRef.current.classList.remove('dragging');
     };
 
     useEffect(() => {
@@ -70,12 +116,21 @@ export default function Selectionbar() {
                 <div className="selection-main">
                     {showLeftScroll && (
                         <div className="left-scroll">
-                            <button type="button" onClick={scrollLeft}>
+                            <button type="button" onClick={scrollLeftBtn}>
                                 <LeftScrollIco />
                             </button>
                         </div>
                     )}
-                    <div className="selection-slider" ref={sliderRef}>
+                    <div
+                        className="selection-slider"
+                        ref={sliderRef}
+                        onMouseDown={handleMouseDown}
+                        onMouseMove={handleMouseMove}
+                        onMouseUp={handleMouseUp}
+                        onMouseLeave={handleMouseUp}
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                        onTouchEnd={handleTouchEnd}>
                         {selectionData.map(({ imgSrc, text }, index) => (
                             <div className="slider-box" key={index}>
                                 <div className="selection-box">
@@ -87,7 +142,7 @@ export default function Selectionbar() {
                     </div>
                     {showRightScroll && (
                         <div className="right-scroll">
-                            <button type="button" onClick={scrollRight}>
+                            <button type="button" onClick={scrollRightBtn}>
                                 <RightScrollIco />
                             </button>
                         </div>

@@ -1,4 +1,4 @@
-@import '../../styles/typography/typography';
+@import "../../styles/typography/typography";
 
 .selectionbar {
     background-color: var(--color-white);
@@ -49,10 +49,9 @@
             gap: 35px;
 
             .slider-box {
-                // width: max-content;
+                user-select: none;
 
                 .selection-box {
-                    // width: max-content;
                     margin: 12px 0 10px 0;
                     padding: 4px 0;
                     display: flex;
@@ -105,6 +104,11 @@
                     }
                 }
             }
+        }
+
+        .selection-slider.dragging {
+            cursor: grabbing;
+            user-select: none;
         }
     }
 }
