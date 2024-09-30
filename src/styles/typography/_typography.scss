@@ -1,5 +1,8 @@
 
-
+@mixin font10 {
+    font-size: 10px;
+    line-height: 12px;
+}
 
 @mixin font12 {
     font-size: 12px;

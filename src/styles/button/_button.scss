@@ -164,3 +164,18 @@ nav {
         }
     }
 }
+
+.left-slide,
+.right-slide {
+    button {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}

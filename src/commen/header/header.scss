@@ -68,6 +68,11 @@ header {
     }
 
     .header-respo {
+        display: none;
         padding: 14px 0 0 0;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
     }
 }

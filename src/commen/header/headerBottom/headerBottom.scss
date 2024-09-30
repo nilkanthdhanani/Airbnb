@@ -1,0 +1,51 @@
+@import "../../../styles/typography/typography";
+
+.header-bottom {
+    display: none;
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+    border-top: 1px solid var(--border-header);
+    padding: 8px;
+    background-color: var(--color-white);
+    grid-template-columns: repeat(3, 100px);
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    @media (max-width: 768px) {
+        display: grid;
+    }
+
+    .header-bottom-div {
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                fill: none;
+                stroke-width: 2px;
+                stroke: var(--font-color2);
+            }
+
+            span {
+                display: block;
+                margin-top: 5px;
+                @include font12;
+                color: var(--font-color2);
+            }
+        }
+
+        .active {
+            svg {
+                stroke: var(--logo-color);
+            }
+
+            span {
+                color: var(--logo-color);
+            }
+        }
+    }
+}

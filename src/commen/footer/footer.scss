@@ -7,42 +7,79 @@ footer {
         padding: 48px 0;
         border-bottom: 1px solid var(--border-button);
 
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
         h2 {
             margin-bottom: 8px;
             @include footerHead;
             color: var(--font-color);
         }
 
-        .inspiration-select {
-            display: flex;
-            gap: 26px;
-            border-bottom: 1px solid var(--border-button);
+        .inspiration-main {
+            position: relative;
 
-            .inspiration-select-box {
-                padding: 16px 0;
-                cursor: pointer;
-                position: relative;
+            .inspiration-select {
+                display: flex;
+                gap: 26px;
+                border-bottom: 1px solid var(--border-button);
+                overflow-x: auto;
+                white-space: nowrap;
 
-                span {
-                    @include homeButton;
-                    color: var(--font-color2);
-                }
+                .inspiration-select-box {
+                    padding: 16px 0;
+                    cursor: pointer;
+                    position: relative;
 
-                &.active {
                     span {
-                        color: var(--font-color);
+                        @include homeButton;
+                        color: var(--font-color2);
                     }
 
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        height: 2px;
-                        width: 100%;
-                        left: 0;
-                        bottom: 0;
-                        background-color: var(--font-color);
+                    &.active {
+                        span {
+                            color: var(--font-color);
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            height: 2px;
+                            width: 100%;
+                            left: 0;
+                            bottom: 0;
+                            background-color: var(--font-color);
+                        }
                     }
                 }
+            }
+
+            .left-slide,
+            .right-slide {
+                position: absolute;
+                z-index: 9;
+                top: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    fill: var(--color-black);
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            .left-slide {
+                left: 0;
+                background: linear-gradient(270deg, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 1) 25%);
+            }
+
+            .right-slide {
+                right: 0;
+                background: linear-gradient(90deg, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 1) 25%);
             }
         }
 
@@ -51,6 +88,14 @@ footer {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 24px 8px;
+
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @media (max-width: 576px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
             .inspier-inner-box {
                 h3 {
@@ -97,7 +142,19 @@ footer {
             grid-template-columns: repeat(3, 1fr);
             gap: 8px;
 
+            @media (max-width: 1024px) {
+                display: block;
+                gap: 0;
+                padding: 0;
+                border: none;
+            }
+
             .footer-link-box {
+                @media (max-width: 1024px) {
+                    padding: 24px 0;
+                    border-bottom: 1px solid var(--border-button);
+                }
+
                 h3 {
                     @include homeButton;
                     color: var(--font-color);
@@ -129,9 +186,27 @@ footer {
             align-items: center;
             justify-content: space-between;
 
+            @media (max-width: 1024px) {
+                flex-direction: column-reverse;
+                gap: 16px;
+            }
+
+            @media (max-width: 576px) {
+                align-items: start;
+            }
+
             .footer-copy-div {
                 display: flex;
                 align-items: center;
+
+                @media (max-width: 1024px) {
+                    flex-direction: column;
+                    gap: 2px;
+                }
+
+                @media (max-width: 576px) {
+                    align-items: start;
+                }
 
                 p {
                     @include homeButton;
@@ -139,20 +214,30 @@ footer {
                     color: var(--font-color);
                 }
 
-                a {
-                    display: block;
-                    @include homeButton;
-                    font-weight: 400;
-                    color: var(--font-color);
+                .term-list {
+                    display: flex;
 
-                    &:hover {
-                        text-decoration-line: underline;
+                    a {
+                        display: block;
+                        @include homeButton;
+                        font-weight: 400;
+                        color: var(--font-color);
+
+                        &:hover {
+                            text-decoration-line: underline;
+                        }
                     }
-                }
 
-                span {
-                    padding: 0 8px;
-                    line-height: 18px;
+                    span {
+                        padding: 0 8px;
+                        line-height: 18px;
+
+                        @media (max-width: 1024px) {
+                            &:first-child {
+                                display: none;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -191,6 +276,10 @@ footer {
                     display: flex;
                     align-items: center;
                     gap: 16px;
+
+                    @media (max-width: 576px) {
+                        display: none;
+                    }
 
                     a {
                         height: 18px;

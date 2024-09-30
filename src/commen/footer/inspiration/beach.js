@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../footer.scss';
 import DropIco from '../../../assets/images/svg/dropIco';
 
@@ -40,7 +40,30 @@ const popularDestinations = [
 ];
 
 export default function Beach() {
-  const [visibleDestinations, setVisibleDestinations] = useState(17);
+  const calculateVisibleDestinations = () => {
+    if (window.innerWidth <= 576) {
+      return 7;
+    } else if (window.innerWidth <= 1024) {
+      return 11;
+    } else {
+      return 17;
+    }
+  };
+
+  // Initialize state with the correct number of destinations based on screen size
+  const [visibleDestinations, setVisibleDestinations] = useState(calculateVisibleDestinations);
+
+  useEffect(() => {
+    const updateVisibleDestinations = () => {
+      setVisibleDestinations(calculateVisibleDestinations());
+    };
+
+    window.addEventListener('resize', updateVisibleDestinations);
+
+    return () => {
+      window.removeEventListener('resize', updateVisibleDestinations);
+    };
+  }, []);
 
   const handleShowMore = () => {
     setVisibleDestinations(popularDestinations.length);

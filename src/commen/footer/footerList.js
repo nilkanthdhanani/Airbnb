@@ -41,14 +41,16 @@ export default function FooterList() {
                 <div className="footer-list-copy">
                     <div className="footer-copy-div">
                         <p>© 2024 Airbnb, Inc.</p>
-                        <span>·</span>
-                        <NavLink to={'/'}>Privacy</NavLink>
-                        <span>·</span>
-                        <NavLink to={'/'}>Terms</NavLink>
-                        <span>·</span>
-                        <NavLink to={'/'}>Sitemap</NavLink>
-                        <span>·</span>
-                        <NavLink to={'/'}>Company details</NavLink>
+                        <div className="term-list">
+                            <span>·</span>
+                            <NavLink to={'/'}>Privacy</NavLink>
+                            <span>·</span>
+                            <NavLink to={'/'}>Terms</NavLink>
+                            <span>·</span>
+                            <NavLink to={'/'}>Sitemap</NavLink>
+                            <span>·</span>
+                            <NavLink to={'/'}>Company details</NavLink>
+                        </div>
                     </div>
                     <div className="footer-copy-div2">
                         <div className="footer-leg">
