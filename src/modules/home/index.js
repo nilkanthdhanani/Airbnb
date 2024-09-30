@@ -1,14 +1,12 @@
 import React from 'react'
-import HeroBanner from './heroBanner'
-import SecBanner from './heroBanner/secBanner'
-import Sample from './heroBanner/sample'
+import Slider from './heroBanner/slider'
+import Slider2 from './heroBanner/slider2'
 
 export default function Home() {
   return (
     <main>
-      <Sample/>
-      <HeroBanner />
-      <SecBanner />
+      <Slider/>
+      <Slider2/>
     </main>
   )
 }

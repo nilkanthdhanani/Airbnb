@@ -1,0 +1,156 @@
+@import "../../../styles/typography/typography";
+
+.past-expireance {
+    h2 {
+        margin-bottom: 25px;
+        @include pastHead;
+        color: var(--font-color);
+    }
+
+    .slider {
+        margin: 16px 0 52px 0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 40px 24px;
+
+        @media (max-width: 1880px) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        @media (max-width: 1640px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: 1128px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .slider-div {
+            .slider-image-div {
+                position: relative;
+                overflow: hidden;
+                border-radius: 12px;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                }
+
+                .upload {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    z-index: 9;
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 50%;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    padding: 7px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: 0.3s ease-in-out;
+
+                    svg {
+                        width: 14px;
+                        stroke-width: 3px;
+                        stroke: var(--color-black);
+                    }
+
+                    &:hover {
+                        background-color: var(--color-white);
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+
+                .left-scroll,
+                .right-scroll {
+                    position: absolute;
+                    z-index: 9;
+                    top: calc(50% - 16px);
+                    transition: 0.3s ease-in-out;
+                    opacity: 0;
+
+                    svg {
+                        fill: var(--color-black);
+                        width: 12px;
+                        height: 12px;
+                    }
+
+                    button:disabled {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+
+                .left-scroll {
+                    left: 10px;
+                }
+
+                .right-scroll {
+                    right: 10px;
+                }
+
+                .track-buttons {
+                    position: absolute;
+                    bottom: 20px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+
+                    .track-btn {
+                        padding: 3px;
+                        border-radius: 50%;
+                        background-color: rgba(255, 255, 255, 0.5);
+                        border: none;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+
+                        &.active {
+                            background-color: var(--color-white);
+                        }
+                    }
+                }
+
+                &:hover {
+                    .left-scroll,
+                    .right-scroll {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .slider-div-text {
+                margin-top: 12px;
+
+                h3 {
+                    @include font15;
+                    font-weight: 500;
+                    color: var(--font-color);
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                p {
+                    @include font15;
+                    color: var(--font-color2);
+                    margin: 2px 0;
+                }
+
+                span {
+                    display: block;
+                    @include font15;
+                    font-weight: 500;
+                    color: var(--font-color);
+                }
+            }
+        }
+    }
+}

@@ -3,32 +3,40 @@ import '../footer.scss';
 import DropIco from '../../../assets/images/svg/dropIco';
 
 const popularDestinations = [
-  { city: "Mountains", type: "Flat rentals" },
-  { city: "Benalmádena", type: "Beach house rentals" },
-  { city: "Marbella", type: "Beach house rentals" },
-  { city: "Mijas", type: "House rentals" },
-  { city: "Prescott", type: "Cottage rentals" },
-  { city: "Scottsdale", type: "Rentals with pools" },
-  { city: "Canmore", type: "Flat rentals" },
-  { city: "Benalmádena", type: "Beach house rentals" },
-  { city: "Marbella", type: "Beach house rentals" },
-  { city: "Mijas", type: "House rentals" },
-  { city: "Prescott", type: "Cottage rentals" },
-  { city: "Scottsdale", type: "Rentals with pools" },
-  { city: "Canmore", type: "Flat rentals" },
-  { city: "Benalmádena", type: "Beach house rentals" },
-  { city: "Marbella", type: "Beach house rentals" },
-  { city: "Mijas", type: "House rentals" },
-  { city: "Prescott", type: "Cottage rentals" },
-  { city: "Canmore", type: "Flat rentals" },
-  { city: "Benalmádena", type: "Beach house rentals" },
-  { city: "Marbella", type: "Beach house rentals" },
-  { city: "Mijas", type: "House rentals" },
-  { city: "Prescott", type: "Cottage rentals" },
+  { city: "Mentone", type: "House rentals" },
+  { city: "Sedona", type: "Apartment rentals" },
+  { city: "Helen", type: "Cabin rentals" },
+  { city: "Pine Moutnain", type: "Holiday rentals" },
+  { city: "Stone Moutnain", type: "Cabin rentals" },
+  { city: "Island Park", type: "Cabin rentals" },
+  { city: "Blue Moutnain", type: "Chalet rentals" },
+  { city: "Asheville", type: "Flat rentals" },
+  { city: "Blowing Rock", type: "House rentals" },
+  { city: "Boone", type: "Holiday rentals" },
+  { city: "Hochatown", type: "Holiday rentals" },
+  { city: "Pideon Forge", type: "Holiday rentals" },
+  { city: "Townsend", type: "Holiday rentals" },
+  { city: "Wears Valley", type: "Holiday rentals" },
+  { city: "Cabins", type: "Holiday rentals" },
+  { city: "Mentone", type: "House rentals" },
+  { city: "Sedona", type: "Apartment rentals" },
+  { city: "Helen", type: "Cabin rentals" },
+  { city: "Pine Moutnain", type: "Holiday rentals" },
+  { city: "Stone Moutnain", type: "Cabin rentals" },
+  { city: "Island Park", type: "Cabin rentals" },
+  { city: "Blue Moutnain", type: "Chalet rentals" },
+  { city: "Asheville", type: "Flat rentals" },
+  { city: "Blowing Rock", type: "House rentals" },
+  { city: "Boone", type: "Holiday rentals" },
+  { city: "Hochatown", type: "Holiday rentals" },
+  { city: "Pideon Forge", type: "Holiday rentals" },
+  { city: "Townsend", type: "Holiday rentals" },
+  { city: "Wears Valley", type: "Holiday rentals" },
+  { city: "Cabins", type: "Holiday rentals" },
 ];
 
 export default function Mountains() {
-  const [visibleDestinations, setVisibleDestinations] = useState(11);
+  const [visibleDestinations, setVisibleDestinations] = useState(17);
 
   const handleShowMore = () => {
     setVisibleDestinations(popularDestinations.length);

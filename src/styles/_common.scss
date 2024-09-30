@@ -30,4 +30,6 @@ a {
 
 img {
     max-width: 100%;
+    -webkit-user-drag: none;
+    object-fit: cover;
 }

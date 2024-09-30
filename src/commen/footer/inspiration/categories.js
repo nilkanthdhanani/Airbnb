@@ -3,32 +3,27 @@ import '../footer.scss';
 import DropIco from '../../../assets/images/svg/dropIco';
 
 const popularDestinations = [
-  { city: "Categories", type: "Flat rentals" },
-  { city: "Benalmádena", type: "Beach house rentals" },
-  { city: "Marbella", type: "Beach house rentals" },
-  { city: "Mijas", type: "House rentals" },
-  { city: "Prescott", type: "Cottage rentals" },
-  { city: "Scottsdale", type: "Rentals with pools" },
-  { city: "Canmore", type: "Flat rentals" },
-  { city: "Benalmádena", type: "Beach house rentals" },
-  { city: "Marbella", type: "Beach house rentals" },
-  { city: "Mijas", type: "House rentals" },
-  { city: "Prescott", type: "Cottage rentals" },
-  { city: "Scottsdale", type: "Rentals with pools" },
-  { city: "Canmore", type: "Flat rentals" },
-  { city: "Benalmádena", type: "Beach house rentals" },
-  { city: "Marbella", type: "Beach house rentals" },
-  { city: "Mijas", type: "House rentals" },
-  { city: "Prescott", type: "Cottage rentals" },
-  { city: "Canmore", type: "Flat rentals" },
-  { city: "Benalmádena", type: "Beach house rentals" },
-  { city: "Marbella", type: "Beach house rentals" },
-  { city: "Mijas", type: "House rentals" },
-  { city: "Prescott", type: "Cottage rentals" },
+  { city: "Amazing pools", type: "" },
+  { city: "Arctic", type: "" },
+  { city: "Camping", type: "" },
+  { city: "Camper vans", type: "" },
+  { city: "Castles", type: "" },
+  { city: "Containers", type: "" },
+  { city: "Countryside", type: "" },
+  { city: "Design", type: "" },
+  { city: "Earth homes", type: "" },
+  { city: "Farms", type: "" },
+  { city: "National parks", type: "" },
+  { city: "Vineyards", type: "" },
+  { city: "OMG!", type: "" },
+  { city: "Tiny homes", type: "" },
+  { city: "Towers", type: "" },
+  { city: "Windmills", type: "" },
+  { city: "Luxe", type: "" },
 ];
 
 export default function Categories() {
-  const [visibleDestinations, setVisibleDestinations] = useState(11);
+  const [visibleDestinations, setVisibleDestinations] = useState(17);
 
   const handleShowMore = () => {
     setVisibleDestinations(popularDestinations.length);

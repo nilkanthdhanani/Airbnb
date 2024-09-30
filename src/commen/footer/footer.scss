@@ -74,6 +74,10 @@ footer {
                 h3 {
                     @include homeButton;
                     color: var(--font-color);
+
+                    &:hover {
+                        text-decoration-line: underline;
+                    }
                 }
 
                 svg {
