@@ -119,7 +119,48 @@ nav {
 
         &:hover {
             transform: scale(1.04);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+    }
+}
+
+.header-respo {
+    button {
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 50px;
+        background-color: var(--color-white);
+        border: none;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 20px;
+        cursor: pointer;
+
+        .button-content {
+            text-align: left;
+
+            p {
+                color: var(--font-color);
+                @include homeButton;
+                line-height: 20px;
+            }
+
+            .button-span {
+                display: flex;
+                gap: 5px;
+
+                span {
+                    color: var(--font-color2);
+                    @include font12;
+
+                    &:nth-child(2n + 2) {
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+            }
         }
     }
 }

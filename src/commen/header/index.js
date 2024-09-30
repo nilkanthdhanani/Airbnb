@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import WorldIco from '../../assets/images/svg/worldIco';
 import UserIco from '../../assets/images/svg/userIcon';
 import MenuIco from '../../assets/images/svg/menuIco';
+import SearchIco from '../../assets/images/svg/searchIco';
 
 export default function Header() {
   const [activeButton, setActiveButton] = useState('stays');
@@ -50,6 +51,21 @@ export default function Header() {
               </button>
             </div>
           </div>
+        </div>
+        <div className="header-respo">
+          <button type='button'>
+            <SearchIco />
+            <div className="button-content">
+              <p>Where to?</p>
+              <div className="button-span">
+                <span>Anywhere</span>
+                <span>•</span>
+                <span>Any week</span>
+                <span>•</span>
+                <span>Add guests</span>
+              </div>
+            </div>
+          </button>
         </div>
       </div>
     </header>

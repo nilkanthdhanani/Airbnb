@@ -3,6 +3,10 @@ header {
     background-color: var(--color-white);
     border-bottom: 1px solid var(--border-button);
 
+    @media (max-width: 768px) {
+        border-bottom: none;
+    }
+
     .header-div {
         padding: 8px 0;
         display: grid;
@@ -10,9 +14,18 @@ header {
         align-items: center;
         justify-content: space-between;
 
+        @media (max-width: 1024px) {
+            grid-template-columns: auto auto 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
         .logo {
             display: flex;
-            
+
             a {
                 display: block;
                 min-height: 64px;
@@ -22,6 +35,15 @@ header {
                 svg {
                     fill: var(--color-black);
                     transition: 0.3s ease-in-out;
+
+                    @media (max-width: 1024px) {
+                        max-width: 33px;
+                        path {
+                            &:nth-child(2) {
+                                display: none;
+                            }
+                        }
+                    }
                 }
 
                 &:hover {
@@ -43,5 +65,9 @@ header {
             align-items: center;
             justify-content: flex-end;
         }
+    }
+
+    .header-respo {
+        padding: 14px 0 0 0;
     }
 }

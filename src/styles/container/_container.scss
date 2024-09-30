@@ -6,6 +6,10 @@
     @media (max-width: 1440px) {
         padding: 0 40px;
     }
+
+    @media (max-width: 768px) {
+        padding: 0 24px;
+    }
 }
 
 .container-footer {
@@ -19,5 +23,9 @@
 
     @media (max-width: 1440px) {
         padding: 0 40px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 24px;
     }
 }
