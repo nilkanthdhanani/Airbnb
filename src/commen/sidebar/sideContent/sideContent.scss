@@ -3,10 +3,10 @@
 .stays-content {
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr auto auto;
+    grid-template-rows: auto auto auto;
     gap: 12px;
 
-    .stay-where {
+    .stay-where, .stay-when, .stay-who {
         background-color: var(--color-white);
         border-radius: 16px;
         box-shadow:
@@ -118,8 +118,8 @@
         }
     }
 
-    .stay-when,
-    .stay-who {
+    .where, .when,
+    .who {
         padding: 19px 20px;
         background-color: var(--color-white);
         border-radius: 16px;

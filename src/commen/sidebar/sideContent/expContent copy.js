@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './sideContent.scss'
 import { placeIco21, placeIco22, placeIco23, placeIco24, placeIco25, placeIco26, placeIco27, placeIco28, placeIco29, placeIco30, } from '../../../assets/images/image';
 import ExploreIco from '../../../assets/images/svg/exploreIco';
@@ -17,7 +17,6 @@ const suggestedPlaces = [
     { ico: placeIco30, title: "Lisbon, Portugal" }
 ];
 
-
 const PlaceList = ({ places }) => places.map(({ ico, title }, i) => (
     <div className="place-list" key={i}>
         <img src={ico} alt="place" />
@@ -27,25 +26,83 @@ const PlaceList = ({ places }) => places.map(({ ico, title }, i) => (
     </div>
 ));
 
-export default function ExpContent() {
+export default function StayContent() {
+    const [activeSection, setActiveSection] = useState('where');
+
+    const toggleSection = (section) => {
+        setActiveSection(activeSection === section ? null : section);
+    };
+
     return (
         <div className='stays-content'>
-            <div className="stay-where">
-                <div className="stay-where-search">
-                    <h2>Where to?</h2>
-                    <div className="stay-where-search-input">
-                        <input type="text" id='search' placeholder="Search destinations" />
-                        <ExploreIco />
+            {activeSection !== 'where' && (
+                <div className="where" onClick={() => toggleSection('where')}>
+                    <h3>Where</h3>
+                    <span>{activeSection === 'where' ? '-' : "I'm Flexible"}</span>
+                </div>
+            )}
+            {activeSection === 'where' && (
+                <div className="stay-where">
+                    <div className="stay-where-search">
+                        <h2>Where to?</h2>
+                        <div className="stay-where-search-input">
+                            <input type="text" id='search' placeholder="Search destinations" />
+                            <ExploreIco />
+                        </div>
                     </div>
+                    <div className="stay-where-list">
+                        <span>Suggested destinations</span>
+                        <PlaceList places={suggestedPlaces} />
+                    </div>
+                    <div className="more-items"><DropIco /></div>
                 </div>
-                <div className="stay-where-list">
-                    <span>Suggested destinations</span>
-                    <PlaceList places={suggestedPlaces} />
+            )}
+
+            {activeSection !== 'when' && (
+                <div className="when" onClick={() => toggleSection('when')}>
+                    <h3>When</h3>
+                    <span>{activeSection === 'when' ? '-' : 'Add dates'}</span>
                 </div>
-                <div className="more-items"><DropIco /></div>
-            </div>
-            <div className="stay-when"><h3>When</h3><span>Add dates</span></div>
-            <div className="stay-who"><h3>Who</h3><span>Add guests</span></div>
+            )}
+            {activeSection === 'when' && (
+                <div className="stay-when">
+                    <div className="stay-where-search">
+                        <h2>When’s your trip?</h2>
+                        <div className="stay-where-search-input">
+                            <input type="text" id='search' placeholder="Search destinations" />
+                            <ExploreIco />
+                        </div>
+                    </div>
+                    <div className="stay-where-list">
+                        <span>Suggested destinations</span>
+                        <PlaceList places={suggestedPlaces} />
+                    </div>
+                    <div className="more-items"><DropIco /></div>
+                </div>
+            )}
+
+            {activeSection !== 'who' && (
+                <div className="who" onClick={() => toggleSection('who')}>
+                    <h3>Who</h3>
+                    <span>{activeSection === 'who' ? '-' : 'Add guests'}</span>
+                </div>
+            )}
+            {activeSection === 'who' && (
+                <div className="stay-who">
+                    <div className="stay-where-search">
+                        <h2>Who’s coming?</h2>
+                        <div className="stay-where-search-input">
+                            <input type="text" id='search' placeholder="Search destinations" />
+                            <ExploreIco />
+                        </div>
+                    </div>
+                    <div className="stay-where-list">
+                        <span>Suggested destinations</span>
+                        <PlaceList places={suggestedPlaces} />
+                    </div>
+                    <div className="more-items"><DropIco /></div>
+                </div>
+            )}
         </div>
-    )
+    );
 }
