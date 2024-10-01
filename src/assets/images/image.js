@@ -56,6 +56,36 @@ import polly9 from './png/polly9.png';
 import polly10 from './png/polly10.png';
 import polly11 from './png/polly11.png';
 import polly12 from './png/polly12.png';
+import placeIco1 from './png/placeIco1.png';
+import placeIco2 from './png/placeIco2.png';
+import placeIco3 from './png/placeIco3.png';
+import placeIco4 from './png/placeIco4.png';
+import placeIco5 from './png/placeIco5.png';
+import placeIco6 from './png/placeIco6.png';
+import placeIco7 from './png/placeIco7.png';
+import placeIco8 from './png/placeIco8.png';
+import placeIco9 from './png/placeIco9.png';
+import placeIco10 from './png/placeIco10.png';
+import placeIco11 from './png/placeIco11.png';
+import placeIco12 from './png/placeIco12.png';
+import placeIco13 from './png/placeIco13.png';
+import placeIco14 from './png/placeIco14.png';
+import placeIco15 from './png/placeIco15.png';
+import placeIco16 from './png/placeIco16.png';
+import placeIco17 from './png/placeIco17.png';
+import placeIco18 from './png/placeIco18.png';
+import placeIco19 from './png/placeIco19.png';
+import placeIco20 from './png/placeIco20.png';
+import placeIco21 from './png/placeIco21.png';
+import placeIco22 from './png/placeIco22.png';
+import placeIco23 from './png/placeIco23.png';
+import placeIco24 from './png/placeIco24.png';
+import placeIco25 from './png/placeIco25.png';
+import placeIco26 from './png/placeIco26.png';
+import placeIco27 from './png/placeIco27.png';
+import placeIco28 from './png/placeIco28.png';
+import placeIco29 from './png/placeIco29.png';
+import placeIco30 from './png/placeIco30.png';
 
 import one1 from './card/one/1.webp';
 import one2 from './card/one/1.1.webp';
@@ -125,7 +155,7 @@ import sixteen4 from './card/sixteen/16.3.jpeg';
 export {
   views, pools, farms, islands, caves, omg, luxe, castles, beachfront, cabins, rooms, tinyHomes, topWorld, mainBlock6, past1, past2, past3, past4, past6, past7, past8, past9, past10, past11, past12, past13, past14, past15, past16, past5, kevin1, kevin2, kevin3, kevin4, train1, train2, train3, train4,
 
-  icons, mainBlock1, mainBlock2, mainBlock3, mainBlock4, mainBlock5, polly1, polly2, polly3, polly4, polly5, polly6, polly7, polly8, polly9, polly10, polly11, polly12,
-  
+  icons, mainBlock1, mainBlock2, mainBlock3, mainBlock4, mainBlock5, polly1, polly2, polly3, polly4, polly5, polly6, polly7, polly8, polly9, polly10, polly11, polly12, placeIco1, placeIco2, placeIco3, placeIco4, placeIco5, placeIco6, placeIco7, placeIco8, placeIco9, placeIco10, placeIco11, placeIco12, placeIco13, placeIco14, placeIco15, placeIco16, placeIco17, placeIco18, placeIco19, placeIco20, placeIco21, placeIco22, placeIco23, placeIco24, placeIco25, placeIco26, placeIco27, placeIco28, placeIco29, placeIco30,
+
   one1, one2, one3, one4, two, two2, two3, two4, three1, three2, three3, three4, four1, four2, four3, four4, five1, five2, five3, five4, six1, six2, six3, six4, seven1, seven2, seven3, seven4, eight1, eight2, eight3, eight4, nine1, nine2, nine3, nine4, ten1, ten2, ten3, ten4, eleven1, eleven2, eleven3, eleven4, twelve1, twelve2, twelve3, twelve4, thirteen1, thirteen2, thirteen3, thirteen4, fourteen1, fourteen2, fourteen3, fourteen4, fifteen1, fifteen2, fifteen3, fifteen4, sixteen1, sixteen2, sixteen3, sixteen4,
 };

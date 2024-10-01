@@ -179,3 +179,102 @@ nav {
         cursor: pointer;
     }
 }
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+
+    button {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        border: 1px solid var(--border-button2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        svg {
+            stroke-width: 4px;
+            stroke: var(--color-black);
+        }
+
+        &:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+
+.aside-header-link {
+    button {
+        padding: 4px 10px;
+        border: none;
+        border-radius: 90px;
+        background-color: transparent;
+        @include font16Line;
+        font-weight: 500;
+        color: var(--font-color2);
+        cursor: pointer;
+        position: relative;
+
+        &.active {
+            color: var(--font-color);
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 10px;
+                bottom: 0;
+                width: calc(100% - 20px);
+                border-bottom: 1.5px solid var(--font-color);
+            }
+        }
+    }
+}
+
+.clear-all-btn {
+    button {
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: transparent;
+        @include font16Line;
+        font-weight: 500;
+        text-decoration-line: underline;
+        color: var(--font-color);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        
+        &:hover {
+            background-color: var(--bg-button-hover);
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+
+.search-btn {
+    button {
+        padding: 14px 24px;
+        background: var(--bg-button);
+        border: none;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include homeButton;
+        cursor: pointer;
+        color: var(--color-white);
+
+        svg {
+            height: 16px;
+            width: 16px;
+            stroke-width: 4px;
+            stroke: var(--color-white);
+        }
+    }
+}

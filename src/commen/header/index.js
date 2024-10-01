@@ -6,9 +6,20 @@ import WorldIco from '../../assets/images/svg/worldIco';
 import UserIco from '../../assets/images/svg/userIcon';
 import MenuIco from '../../assets/images/svg/menuIco';
 import SearchIco from '../../assets/images/svg/searchIco';
+import Sidebar from '../sidebar';
 
 export default function Header() {
   const [activeButton, setActiveButton] = useState('stays');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+    if (!isSidebarOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  };
 
   return (
     <header>
@@ -52,8 +63,9 @@ export default function Header() {
             </div>
           </div>
         </div>
+
         <div className="header-respo">
-          <button type='button'>
+          <button type='button' onClick={toggleSidebar}>
             <SearchIco />
             <div className="button-content">
               <p>Where to?</p>
@@ -68,6 +80,7 @@ export default function Header() {
           </button>
         </div>
       </div>
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </header>
   );
 }
