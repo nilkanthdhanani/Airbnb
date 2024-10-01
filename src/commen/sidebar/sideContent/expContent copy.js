@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import './sideContent.scss'
+import React, { useState } from 'react';
+import './sideContent.scss';
 import { placeIco21, placeIco22, placeIco23, placeIco24, placeIco25, placeIco26, placeIco27, placeIco28, placeIco29, placeIco30, } from '../../../assets/images/image';
 import ExploreIco from '../../../assets/images/svg/exploreIco';
 import DropIco from '../../../assets/images/svg/dropIco';
@@ -33,8 +33,21 @@ export default function StayContent() {
         setActiveSection(activeSection === section ? null : section);
     };
 
+    const gridTemplateRows = () => {
+        switch (activeSection) {
+            case 'where':
+                return '1fr 56px 56px';
+            case 'when':
+                return '56px 1fr 56px';
+            case 'who':
+                return '56px 56px 1fr';
+            default:
+                return '56px 56px 56px';
+        }
+    };
+
     return (
-        <div className='stays-content'>
+        <div className='stays-content' style={{ gridTemplateRows: gridTemplateRows() }}>
             {activeSection !== 'where' && (
                 <div className="where" onClick={() => toggleSection('where')}>
                     <h3>Where</h3>
@@ -68,16 +81,7 @@ export default function StayContent() {
                 <div className="stay-when">
                     <div className="stay-where-search">
                         <h2>When’s your trip?</h2>
-                        <div className="stay-where-search-input">
-                            <input type="text" id='search' placeholder="Search destinations" />
-                            <ExploreIco />
-                        </div>
                     </div>
-                    <div className="stay-where-list">
-                        <span>Suggested destinations</span>
-                        <PlaceList places={suggestedPlaces} />
-                    </div>
-                    <div className="more-items"><DropIco /></div>
                 </div>
             )}
 
@@ -91,16 +95,7 @@ export default function StayContent() {
                 <div className="stay-who">
                     <div className="stay-where-search">
                         <h2>Who’s coming?</h2>
-                        <div className="stay-where-search-input">
-                            <input type="text" id='search' placeholder="Search destinations" />
-                            <ExploreIco />
-                        </div>
                     </div>
-                    <div className="stay-where-list">
-                        <span>Suggested destinations</span>
-                        <PlaceList places={suggestedPlaces} />
-                    </div>
-                    <div className="more-items"><DropIco /></div>
                 </div>
             )}
         </div>
