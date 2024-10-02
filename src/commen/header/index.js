@@ -64,7 +64,9 @@ export default function Header() {
               <NavLink to={"/"} >Airbnb your home</NavLink>
             </div>
             <div className="search-button">
-              <NavLink><WorldIco /></NavLink>
+              <NavLink aria-label="search earth">
+                <WorldIco />
+              </NavLink>
             </div>
             <div className="user-button">
               <button aria-label="user button" type="button">
