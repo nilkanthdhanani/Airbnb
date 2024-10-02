@@ -104,14 +104,14 @@ export default function Inspiration() {
           </div>
           {showLeftButton && (
             <div className="left-slide">
-              <button type="button" onClick={() => handleScroll('left')}>
+              <button aria-label="left scroll button" type="button" onClick={() => handleScroll('left')}>
                 <LeftScrollIco />
               </button>
             </div>
           )}
           {showRightButton && (
             <div className="right-slide">
-              <button type="button" onClick={() => handleScroll('right')}>
+              <button aria-label="right scroll button" type="button" onClick={() => handleScroll('right')}>
                 <RightScrollIco />
               </button>
             </div>

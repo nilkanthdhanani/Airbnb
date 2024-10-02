@@ -1,3 +1,5 @@
+@import "../../styles/typography/typography";
+
 header {
     position: relative;
     background-color: var(--color-white);
@@ -64,6 +66,53 @@ header {
             display: flex;
             align-items: center;
             justify-content: flex-end;
+
+            .home-button {
+                a {
+                    display: block;
+                    padding: 12px 15px;
+                    border: none;
+                    border-radius: 90px;
+                    background-color: transparent;
+                    color: var(--font-color);
+                    @include homeButton;
+                    cursor: pointer;
+                    position: relative;
+                    transform: translateX(6px);
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
+                        background-color: var(--bg-button-hover);
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .search-button {
+                a {
+                    display: block;
+                    margin-right: 5px;
+                    padding: 12px 15px;
+                    border: none;
+                    border-radius: 90px;
+                    background-color: transparent;
+                    color: var(--font-color);
+                    cursor: pointer;
+                    transition: 0.3s ease-in-out;
+
+                    svg {
+                        display: block;
+                        width: 16px;
+                        height: 18px;
+                        fill: var(--font-color);
+                    }
+
+                    &:hover {
+                        background-color: var(--bg-button-hover);
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
         }
     }
 

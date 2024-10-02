@@ -13,7 +13,7 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
             <div className="aside-div">
                 <div className="aside-header">
                     <div className="close-btn">
-                        <button onClick={toggleSidebar}>
+                        <button  aria-label="close button" type="button" onClick={toggleSidebar}>
                             <CloseIco />
                         </button>
                     </div>

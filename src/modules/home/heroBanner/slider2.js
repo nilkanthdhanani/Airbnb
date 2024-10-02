@@ -145,7 +145,7 @@ export default function Slider2() {
                                     ))}
                                 </div>
                                 <div className="left-scroll">
-                                    <button
+                                    <button aria-label="left scroll button"
                                         type="button"
                                         onClick={() => handleScroll(index, -1)}
                                         disabled={currentIndex[index] === 0}>
@@ -153,7 +153,7 @@ export default function Slider2() {
                                     </button>
                                 </div>
                                 <div className="right-scroll">
-                                    <button
+                                    <button aria-label="right scroll button"
                                         type="button"
                                         onClick={() => handleScroll(index, 1)}
                                         disabled={currentIndex[index] === images.length - 1}>
@@ -162,7 +162,7 @@ export default function Slider2() {
                                 </div>
                                 <div className="track-buttons">
                                     {images.map((_, imgIndex) => (
-                                        <button
+                                        <button  aria-label="track button"
                                             key={imgIndex}
                                             className={`track-btn ${currentIndex[index] === imgIndex ? 'active' : ''}`}
                                             onClick={() => handleTrackClick(index, imgIndex)} />

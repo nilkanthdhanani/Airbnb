@@ -13,7 +13,7 @@ export default function SidebarFAQ({ isOpen, toggleSidebar }) {
             <div className="aside-div">
                 <div className="aside-header">
                     <div className="close-btn">
-                        <button onClick={toggleSidebar}>
+                        <button aria-label="clode button" type="button" onClick={toggleSidebar}>
                             <CloseIco />
                         </button>
                     </div>

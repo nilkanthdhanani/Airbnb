@@ -116,7 +116,7 @@ export default function Selectionbar() {
                 <div className="selection-main">
                     {showLeftScroll && (
                         <div className="left-scroll">
-                            <button type="button" onClick={scrollLeftBtn}>
+                            <button aria-label="left scroll button" type="button" onClick={scrollLeftBtn}>
                                 <LeftScrollIco />
                             </button>
                         </div>
@@ -142,7 +142,7 @@ export default function Selectionbar() {
                     </div>
                     {showRightScroll && (
                         <div className="right-scroll">
-                            <button type="button" onClick={scrollRightBtn}>
+                            <button aria-label="right scrollbutton" type="button" onClick={scrollRightBtn}>
                                 <RightScrollIco />
                             </button>
                         </div>

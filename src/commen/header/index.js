@@ -41,7 +41,7 @@ export default function Header() {
       <div className="container">
         <div className="header-div">
           <div className="logo">
-            <NavLink to={"/"} >
+            <NavLink to={"/"} aria-label="logo" >
               <Logo />
             </NavLink>
           </div>
@@ -61,17 +61,13 @@ export default function Header() {
           </nav>
           <div className="user">
             <div className="home-button">
-              <NavLink>
-                <button type="button">Airbnb your home</button>
-              </NavLink>
+              <NavLink to={"/"} >Airbnb your home</NavLink>
             </div>
             <div className="search-button">
-              <button>
-                <WorldIco />
-              </button>
+              <NavLink><WorldIco /></NavLink>
             </div>
             <div className="user-button">
-              <button>
+              <button aria-label="user button" type="button">
                 <MenuIco />
                 <UserIco />
               </button>
@@ -80,7 +76,7 @@ export default function Header() {
         </div>
 
         <div className="header-respo">
-          <button type='button' onClick={toggleSidebar}>
+          <button aria-label="header respo button" type='button' onClick={toggleSidebar}>
             <SearchIco />
             <div className="button-content">
               <p>Where to?</p>
