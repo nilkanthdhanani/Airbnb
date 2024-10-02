@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './header.scss';
 import Logo from '../../assets/images/svg/logoIco';
 import { NavLink } from 'react-router-dom';
@@ -20,6 +20,21 @@ export default function Header() {
       document.body.classList.remove('no-scroll');
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768 && isSidebarOpen) {
+        setIsSidebarOpen(false);
+        document.body.classList.remove('no-scroll');
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isSidebarOpen]);
 
   return (
     <header>
