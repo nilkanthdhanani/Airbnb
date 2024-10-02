@@ -3,7 +3,6 @@
 .stays-content {
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr 56px 56px;
     gap: 12px;
 
     .where,
@@ -31,7 +30,9 @@
         }
     }
 
-    .stay-where {
+    .stay-where,
+    .stay-when,
+    .stay-who {
         background-color: var(--color-white);
         border-radius: 16px;
         overflow: hidden;
@@ -39,6 +40,9 @@
             0 0 0 1px rgb(0 0 0 / 4%),
             0 6px 20px rgb(0 0 0 / 20%);
         position: relative;
+    }
+
+    .stay-where {
         display: grid;
         grid-template-rows: auto 1fr;
 
@@ -132,7 +136,7 @@
             display: flex;
             justify-content: center;
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(247, 247, 247, 0.95));
-            border-top: 1px solid var(--border-button3);
+            border-top: 1px solid var(--border-button2);
             position: absolute;
             width: 100%;
             left: 0;
@@ -143,6 +147,42 @@
                 width: 12px;
                 stroke: var(--font-color2);
                 stroke-width: 4;
+            }
+        }
+    }
+
+    .stay-when {
+        display: grid;
+        grid-template-rows: auto 1fr;
+
+        .stay-when-head {
+            position: sticky;
+            top: 0;
+            padding: 24px 20px;
+            background-color: var(--color-white);
+
+            h2 {
+                margin-bottom: 24px;
+                @include footerHead;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .stay-who {
+        display: grid;
+        grid-template-rows: auto 1fr;
+
+        .stay-who-head {
+            position: sticky;
+            top: 0;
+            padding: 24px 20px;
+            background-color: var(--color-white);
+
+            h2 {
+                margin-bottom: 24px;
+                @include footerHead;
+                font-weight: 700;
             }
         }
     }

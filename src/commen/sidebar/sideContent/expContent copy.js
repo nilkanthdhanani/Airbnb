@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './sideContent.scss';
 import { placeIco21, placeIco22, placeIco23, placeIco24, placeIco25, placeIco26, placeIco27, placeIco28, placeIco29, placeIco30, } from '../../../assets/images/image';
 import ExploreIco from '../../../assets/images/svg/exploreIco';
@@ -27,79 +27,35 @@ const PlaceList = ({ places }) => places.map(({ ico, title }, i) => (
 ));
 
 export default function StayContent() {
-    const [activeSection, setActiveSection] = useState('where');
-
-    const toggleSection = (section) => {
-        setActiveSection(activeSection === section ? null : section);
-    };
-
-    const gridTemplateRows = () => {
-        switch (activeSection) {
-            case 'where':
-                return '1fr 56px 56px';
-            case 'when':
-                return '56px 1fr 56px';
-            case 'who':
-                return '56px 56px 1fr';
-            default:
-                return '56px 56px 56px';
-        }
-    };
 
     return (
-        <div className='stays-content' style={{ gridTemplateRows: gridTemplateRows() }}>
-            {activeSection !== 'where' && (
-                <div className="where" onClick={() => toggleSection('where')}>
-                    <h3>Where</h3>
-                    <span>{activeSection === 'where' ? '-' : "I'm Flexible"}</span>
-                </div>
-            )}
-            {activeSection === 'where' && (
-                <div className="stay-where">
-                    <div className="stay-where-search">
-                        <h2>Where to?</h2>
-                        <div className="stay-where-search-input">
-                            <input type="text" id='search' placeholder="Search destinations" />
-                            <ExploreIco />
-                        </div>
+        <div className='stays-content'>
+            <div className="stay-where">
+                <div className="stay-where-search">
+                    <h2>Where to?</h2>
+                    <div className="stay-where-search-input">
+                        <input type="text" id='search' placeholder="Search destinations" />
+                        <ExploreIco />
                     </div>
-                    <div className="upper-div">
-                        <div className="stay-where-list">
-                            <span>Suggested destinations</span>
-                            <PlaceList places={suggestedPlaces} />
-                        </div>
-                    </div>
-                    <div className="more-items"><DropIco /></div>
                 </div>
-            )}
+                <div className="upper-div">
+                    <div className="stay-where-list">
+                        <span>Suggested destinations</span>
+                        <PlaceList places={suggestedPlaces} />
+                    </div>
+                </div>
+                <div className="more-items"><DropIco /></div>
+            </div>
 
-            {activeSection !== 'when' && (
-                <div className="when" onClick={() => toggleSection('when')}>
-                    <h3>When</h3>
-                    <span>{activeSection === 'when' ? '-' : 'Add dates'}</span>
-                </div>
-            )}
-            {activeSection === 'when' && (
-                <div className="stay-when">
-                    <div className="stay-when-head">
-                        <h2>When’s your trip?</h2>
-                    </div>
-                </div>
-            )}
+            <div className="when">
+                <h3>When</h3>
+                <span>Add dates</span>
+            </div>
 
-            {activeSection !== 'who' && (
-                <div className="who" onClick={() => toggleSection('who')}>
-                    <h3>Who</h3>
-                    <span>{activeSection === 'who' ? '-' : 'Add guests'}</span>
-                </div>
-            )}
-            {activeSection === 'who' && (
-                <div className="stay-who">
-                    <div className="stay-who-head">
-                        <h2>Who’s coming?</h2>
-                    </div>
-                </div>
-            )}
+            <div className="who">
+                <h3>Who</h3>
+                <span>Add guests</span>
+            </div>
         </div>
     );
 }
