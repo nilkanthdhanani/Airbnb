@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import './slider.scss';
 import {
-    one1, one2, one3, one4, two, two2, two3, two4, three1, three2, three3, three4, four1, four2, four3, four4, five1, five2, five3, five4, six1, six2, six3, six4, seven1, seven2, seven3, seven4, eight1, eight2, eight3, eight4, nine1, nine2, nine3, nine4, ten1, ten2, ten3, ten4, eleven1, eleven2, eleven3, eleven4, twelve1, twelve2, twelve3, twelve4, thirteen1, thirteen2, thirteen3, thirteen4, fourteen1, fourteen2, fourteen3, fourteen4, fifteen1, fifteen2, fifteen3, fifteen4, sixteen1, sixteen2, sixteen3, sixteen4,
+    one1, one2, one3, one4, two1, two2, two3, two4, three1, three2, three3, three4, four1, four2, four3, four4, five1, five2, five3, five4, six1, six2, six3, six4, seven1, seven2, seven3, seven4, eight1, eight2, eight3, eight4, nine1, nine2, nine3, nine4, ten1, ten2, ten3, ten4, eleven1, eleven2, eleven3, eleven4, twelve1, twelve2, twelve3, twelve4, thirteen1, thirteen2, thirteen3, thirteen4, fourteen1, fourteen2, fourteen3, fourteen4, fifteen1, fifteen2, fifteen3, fifteen4, sixteen1, sixteen2, sixteen3, sixteen4,
 } from '../../../assets/images/image';
 import UploadIco from '../../../assets/images/svg/uploadIco';
 import RightScrollIco from '../../../assets/images/svg/rightScrollIco';
@@ -15,7 +15,7 @@ export default function Slider2() {
 
     const imageSets = [
         [one1, one2, one3, one4],
-        [two, two2, two3, two4],
+        [two1, two2, two3, two4],
         [three1, three2, three3, three4],
         [four1, four2, four3, four4],
         [five1, five2, five3, five4],
