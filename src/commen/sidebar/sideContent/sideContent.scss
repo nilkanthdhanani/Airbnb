@@ -6,7 +6,6 @@
     grid-template-rows: 1fr 56px 56px;
     gap: 12px;
 
-    .where,
     .when,
     .who {
         padding: 19px 20px;
@@ -114,12 +113,12 @@
                     .place-list-text {
                         h3 {
                             @include font14;
+                            font-weight: 500;
                             color: var(--font-color);
                         }
 
                         p {
                             @include font14;
-                            font-weight: 400;
                             color: var(--font-color2);
                         }
                     }

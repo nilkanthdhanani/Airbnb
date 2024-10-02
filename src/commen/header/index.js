@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './header.scss';
 import Logo from '../../assets/images/svg/logoIco';
 import { NavLink } from 'react-router-dom';
@@ -7,10 +7,15 @@ import UserIco from '../../assets/images/svg/userIcon';
 import MenuIco from '../../assets/images/svg/menuIco';
 import SearchIco from '../../assets/images/svg/searchIco';
 import Sidebar from '../sidebar';
+import Modal from './globalModal/index';
 
 export default function Header() {
   const [activeButton, setActiveButton] = useState('stays');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+  const dropDownRef = useRef(null); // Create ref for the drop-down
+  const userButtonRef = useRef(null); // Create ref for the user button
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -21,27 +26,36 @@ export default function Header() {
     }
   };
 
+  const toggleDropDown = () => {
+    setIsDropDownOpen(!isDropDownOpen);
+  };
+
+  // Handle click outside the drop-down to close it
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768 && isSidebarOpen) {
-        setIsSidebarOpen(false);
-        document.body.classList.remove('no-scroll');
+    const handleClickOutside = (event) => {
+      if (
+        dropDownRef.current &&
+        !dropDownRef.current.contains(event.target) &&
+        userButtonRef.current &&
+        !userButtonRef.current.contains(event.target)
+      ) {
+        setIsDropDownOpen(false); // Close drop-down when clicking outside
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isSidebarOpen]);
+  }, []);
 
   return (
     <header>
       <div className="container">
         <div className="header-div">
           <div className="logo">
-            <NavLink to={"/"} aria-label="logo" >
+            <NavLink to={"/"} aria-label="logo">
               <Logo />
             </NavLink>
           </div>
@@ -61,18 +75,33 @@ export default function Header() {
           </nav>
           <div className="user">
             <div className="home-button">
-              <NavLink to={"/"} >Airbnb your home</NavLink>
+              <NavLink to={"/"}>Airbnb your home</NavLink>
             </div>
             <div className="search-button">
-              <NavLink aria-label="search earth">
+              <NavLink aria-label="search earth" onClick={() => setIsModalOpen(true)}>
                 <WorldIco />
               </NavLink>
             </div>
             <div className="user-button">
-              <button aria-label="user button" type="button">
+              <button
+                aria-label="user button"
+                type="button"
+                onClick={toggleDropDown}
+                ref={userButtonRef} // Add ref to the button
+              >
                 <MenuIco />
                 <UserIco />
               </button>
+              {isDropDownOpen && (
+                <div className="drop-down" ref={dropDownRef}>
+                  <NavLink to="/" onClick={() => setIsDropDownOpen(false)}>Sign up</NavLink>
+                  <NavLink to="/" onClick={() => setIsDropDownOpen(false)}>Log In</NavLink>
+                  <div className="drop-down-border"></div>
+                  <NavLink to="/" onClick={() => setIsDropDownOpen(false)}>Airbnb your home</NavLink>
+                  <NavLink to="/" onClick={() => setIsDropDownOpen(false)}>Host an experience</NavLink>
+                  <NavLink to="/" onClick={() => setIsDropDownOpen(false)}>Help Center</NavLink>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -93,7 +122,10 @@ export default function Header() {
           </button>
         </div>
       </div>
+
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </header>
   );
 }

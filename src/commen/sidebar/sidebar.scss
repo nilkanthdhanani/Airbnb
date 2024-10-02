@@ -23,11 +23,7 @@ aside {
     &.open {
         transform: translateY(0);
 
-        .aside-header {
-            animation: slideInTop 0.9s ease forwards;
-        }
-
-        .aside-content {
+        .aside-start {
             animation: slideInTop 0.6s ease forwards;
         }
 
@@ -40,26 +36,29 @@ aside {
         height: 100%;
         position: relative;
         display: grid;
-        grid-template-rows: auto 1fr 70px;
+        grid-template-rows: 1fr 70px;
 
-        .aside-header {
-            padding: 12px 20px 0 20px;
-            transform: translateY(-100%);
-            opacity: 0;
-
-            .aside-header-link {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 4px;
-            }
-        }
-
-        .aside-content {
-            transform: translateY(-100%);
-            opacity: 0;
-            padding: 18px 12px 12px 12px;
+        .aside-start {
             overflow: hidden;
+            display: grid;
+            transform: translateY(-100%);
+            opacity: 0;
+
+            .aside-header {
+                padding: 12px 20px 0 20px;
+
+                .aside-header-link {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 4px;
+                }
+            }
+
+            .aside-content {
+                padding: 18px 12px 12px 12px;
+                overflow: hidden;
+            }
         }
 
         .aside-footer {
@@ -76,4 +75,21 @@ aside {
 
 .no-scroll {
     overflow: hidden;
+    margin-right: 17px;
 }
+
+// .no-scroll {
+//     inset: 0px;
+//     inset-inline-end: 17px;
+//     position: fixed;
+//     --scrollbar-gutter: 17px;
+// }
+
+// *:not(.simulator) {
+//     inset-inline-end: 0px;
+// }
+
+
+// ::-webkit-scrollbar{
+//     visibility: hidden;
+// }

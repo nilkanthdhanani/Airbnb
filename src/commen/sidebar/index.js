@@ -11,35 +11,37 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
     return (
         <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
             <div className="aside-div">
-                <div className="aside-header">
-                    <div className="close-btn">
-                        <button  aria-label="close button" type="button" onClick={toggleSidebar}>
-                            <CloseIco />
-                        </button>
+                <div className="aside-start">
+                    <div className="aside-header">
+                        <div className="close-btn">
+                            <button aria-label="close button" type="button" onClick={toggleSidebar}>
+                                <CloseIco />
+                            </button>
+                        </div>
+                        <div className="aside-header-link">
+                            <button
+                                type="button"
+                                onClick={() => setActiveSection('stays')}
+                                className={activeSection === 'stays' ? 'active' : ''}>
+                                Stays
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setActiveSection('experiences')}
+                                className={activeSection === 'experiences' ? 'active' : ''}>
+                                Experiences
+                            </button>
+                        </div>
                     </div>
-                    <div className="aside-header-link">
-                        <button
-                            type="button"
-                            onClick={() => setActiveSection('stays')}
-                            className={activeSection === 'stays' ? 'active' : ''}>
-                            Stays
-                        </button>
-                        <button
-                            type="button"
-                            onClick={() => setActiveSection('experiences')}
-                            className={activeSection === 'experiences' ? 'active' : ''}>
-                            Experiences
-                        </button>
-                    </div>
-                </div>
 
-                <div className="aside-content">
-                    {activeSection === 'stays' && (
-                        <StayContent />
-                    )}
-                    {activeSection === 'experiences' && (
-                        <ExpContent />
-                    )}
+                    <div className="aside-content">
+                        {activeSection === 'stays' && (
+                            <StayContent />
+                        )}
+                        {activeSection === 'experiences' && (
+                            <ExpContent />
+                        )}
+                    </div>
                 </div>
 
                 <div className="aside-footer">
