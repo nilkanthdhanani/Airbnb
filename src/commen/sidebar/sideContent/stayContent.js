@@ -79,13 +79,15 @@ export default function StayContent() {
                             <ExploreIco />
                         </div>
                     </div>
-                    <div className="stay-where-list">
-                        <span>Recent searches</span>
-                        <PlaceList places={places} />
-                    </div>
-                    <div className="stay-where-list">
-                        <span>Suggested destinations</span>
-                        <PlaceList places={suggestedPlaces} />
+                    <div className="upper-div">
+                        <div className="stay-where-list">
+                            <span>Recent searches</span>
+                            <PlaceList places={places} />
+                        </div>
+                        <div className="stay-where-list">
+                            <span>Suggested destinations</span>
+                            <PlaceList places={suggestedPlaces} />
+                        </div>
                     </div>
                     <div className="more-items"><DropIco /></div>
                 </div>
