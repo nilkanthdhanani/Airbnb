@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import './sidebar.scss';
+import './sidebarFAQ.scss';
 import CloseIco from '../../assets/images/svg/closeIco';
 import ExploreIco from '../../assets/images/svg/exploreIco';
 import StayContent from './sideContent/stayContent';
-import ExpContent from './sideContent/expContent copy';
+import ExpContent from './sideContent/expContent';
 
-export default function Sidebar({ isOpen, toggleSidebar }) {
+export default function SidebarFAQ({ isOpen, toggleSidebar }) {
     const [activeSection, setActiveSection] = useState('stays');
 
     return (
