@@ -1,6 +1,7 @@
 @import "../../styles/typography/typography";
 
 aside {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,6 +10,10 @@ aside {
     background-color: var(--bg-button-hover);
     z-index: 99;
     transform: translateY(-150%);
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 
     ::-webkit-scrollbar {
         width: 0;

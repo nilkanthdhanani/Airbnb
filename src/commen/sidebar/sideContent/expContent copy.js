@@ -63,9 +63,11 @@ export default function StayContent() {
                             <ExploreIco />
                         </div>
                     </div>
-                    <div className="stay-where-list">
-                        <span>Suggested destinations</span>
-                        <PlaceList places={suggestedPlaces} />
+                    <div className="upper-div">
+                        <div className="stay-where-list">
+                            <span>Suggested destinations</span>
+                            <PlaceList places={suggestedPlaces} />
+                        </div>
                     </div>
                     <div className="more-items"><DropIco /></div>
                 </div>
@@ -79,7 +81,7 @@ export default function StayContent() {
             )}
             {activeSection === 'when' && (
                 <div className="stay-when">
-                    <div className="stay-where-search">
+                    <div className="stay-when-head">
                         <h2>When’s your trip?</h2>
                     </div>
                 </div>
@@ -93,7 +95,7 @@ export default function StayContent() {
             )}
             {activeSection === 'who' && (
                 <div className="stay-who">
-                    <div className="stay-where-search">
+                    <div className="stay-who-head">
                         <h2>Who’s coming?</h2>
                     </div>
                 </div>
