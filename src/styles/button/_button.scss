@@ -204,7 +204,7 @@ nav {
         color: var(--font-color);
         cursor: pointer;
         transition: 0.3s ease-in-out;
-        
+
         &:hover {
             background-color: var(--bg-button-hover);
             transition: 0.3s ease-in-out;
@@ -232,6 +232,31 @@ nav {
             width: 16px;
             stroke-width: 4px;
             stroke: var(--color-white);
+        }
+    }
+}
+
+.close-btn-modal {
+    button {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        svg {
+            stroke-width: 3px;
+            stroke: var(--color-black);
+        }
+
+        &:hover {
+            background-color: var(--bg-hover2);
+            transition: 0.3s ease-in-out;
         }
     }
 }

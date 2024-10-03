@@ -6,11 +6,14 @@ import {
 import UploadIco from '../../../assets/images/svg/uploadIco';
 import RightScrollIco from '../../../assets/images/svg/rightScrollIco';
 import LeftScrollIco from '../../../assets/images/svg/leftScrollIco';
+import Modal from './uploadModal';
 
 export default function Slider() {
     const [currentIndex, setCurrentIndex] = useState([0, 0, 0, 0, 0, 0]);
     const [dragStartX, setDragStartX] = useState(null);
     const [dragging, setDragging] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedContent, setSelectedContent] = useState(null);
     const imageWrapperRef = useRef(null);
 
     const imageSets = [
@@ -94,6 +97,17 @@ export default function Slider() {
         setDragging(false);
     };
 
+    const handleOpenModal = (index) => {
+        const selectedImage = imageSets[index][0];
+        const selectedText = textContent[index].h3;
+        setSelectedContent({ image: selectedImage, h3: selectedText });
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <div className="past-expireance">
             <div className='container'>
@@ -101,7 +115,7 @@ export default function Slider() {
                     {imageSets.map((images, index) => (
                         <div className="slider-div" key={index}>
                             <div className="slider-image-div">
-                                <div className="upload">
+                                <div className="upload" onClick={() => handleOpenModal(index)}>
                                     <UploadIco />
                                 </div>
                                 <div
@@ -157,10 +171,13 @@ export default function Slider() {
                                 <span>{textContent[index].span}</span>
                             </div>
                         </div>
-
                     ))}
                 </div>
             </div>
+
+            {isModalOpen && selectedContent && (
+                <Modal onClose={handleCloseModal} content={selectedContent} />
+            )}
         </div>
     );
 }

@@ -266,9 +266,10 @@ footer {
                         margin-right: 5px;
                     }
 
-                    a {
+                    h4 {
                         @include homeButton;
                         color: var(--font-color);
+                        cursor: pointer;
 
                         &:hover {
                             text-decoration-line: underline;

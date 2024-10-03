@@ -74,22 +74,14 @@ aside {
 }
 
 .no-scroll {
+    // position: fixed;
+    // width: 100%;
+    // overflow-y: scroll;
+
     overflow: hidden;
-    margin-right: 17px;
+    margin-right: 16px;
 }
 
-// .no-scroll {
-//     inset: 0px;
-//     inset-inline-end: 17px;
-//     position: fixed;
-//     --scrollbar-gutter: 17px;
-// }
-
-// *:not(.simulator) {
-//     inset-inline-end: 0px;
-// }
-
-
-// ::-webkit-scrollbar{
-//     visibility: hidden;
-// }
+.no-scroll::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.5);
+}

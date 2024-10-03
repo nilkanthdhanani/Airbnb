@@ -7,15 +7,16 @@ import UserIco from '../../assets/images/svg/userIcon';
 import MenuIco from '../../assets/images/svg/menuIco';
 import SearchIco from '../../assets/images/svg/searchIco';
 import Sidebar from '../sidebar';
-import Modal from './globalModal/index';
+import Modal from '../modal';
 
 export default function Header() {
   const [activeButton, setActiveButton] = useState('stays');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-  const dropDownRef = useRef(null); // Create ref for the drop-down
-  const userButtonRef = useRef(null); // Create ref for the user button
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('language');
+  const dropDownRef = useRef(null);
+  const userButtonRef = useRef(null);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -26,11 +27,27 @@ export default function Header() {
     }
   };
 
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [isModalOpen]);
+
   const toggleDropDown = () => {
     setIsDropDownOpen(!isDropDownOpen);
   };
 
-  // Handle click outside the drop-down to close it
+  const toggleModal = (tab) => {
+    setIsModalOpen(!isModalOpen);
+    setActiveTab(tab);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -39,7 +56,7 @@ export default function Header() {
         userButtonRef.current &&
         !userButtonRef.current.contains(event.target)
       ) {
-        setIsDropDownOpen(false); // Close drop-down when clicking outside
+        setIsDropDownOpen(false);
       }
     };
 
@@ -77,8 +94,8 @@ export default function Header() {
             <div className="home-button">
               <NavLink to={"/"}>Airbnb your home</NavLink>
             </div>
-            <div className="search-button">
-              <NavLink aria-label="search earth" onClick={() => setIsModalOpen(true)}>
+            <div className="search-button" onClick={() => toggleModal('language')}>
+              <NavLink aria-label="search earth">
                 <WorldIco />
               </NavLink>
             </div>
@@ -87,8 +104,7 @@ export default function Header() {
                 aria-label="user button"
                 type="button"
                 onClick={toggleDropDown}
-                ref={userButtonRef} // Add ref to the button
-              >
+                ref={userButtonRef}>
                 <MenuIco />
                 <UserIco />
               </button>
@@ -124,8 +140,7 @@ export default function Header() {
       </div>
 
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <Modal isOpen={isModalOpen} toggleModal={toggleModal} activeTab={activeTab} />
     </header>
   );
 }

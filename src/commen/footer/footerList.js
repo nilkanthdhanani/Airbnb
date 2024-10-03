@@ -1,12 +1,21 @@
-import React from 'react'
-import './footer.scss'
-import { NavLink } from 'react-router-dom'
-import WorldIco from '../../assets/images/svg/worldIco'
-import FacebookIco from '../../assets/images/svg/facebookIco'
-import TwitterIco from '../../assets/images/svg/twitterIco'
-import InstagramIco from '../../assets/images/svg/instagramIco'
+import React, { useState } from 'react';
+import './footer.scss';
+import { NavLink } from 'react-router-dom';
+import WorldIco from '../../assets/images/svg/worldIco';
+import FacebookIco from '../../assets/images/svg/facebookIco';
+import TwitterIco from '../../assets/images/svg/twitterIco';
+import InstagramIco from '../../assets/images/svg/instagramIco';
+import Modal from '../modal';
 
 export default function FooterList() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [activeTab, setActiveTab] = useState('language');
+
+    const toggleModal = (tab) => {
+        setActiveTab(tab);
+        setIsModalOpen(!isModalOpen);
+    };
+
     return (
         <div className='footer-list'>
             <div className="container-footer">
@@ -53,22 +62,24 @@ export default function FooterList() {
                         </div>
                     </div>
                     <div className="footer-copy-div2">
-                        <div className="footer-leg">
+                        <div className="footer-leg" onClick={() => toggleModal('language')}>
                             <WorldIco />
-                            <NavLink to={'/'}>English (IN)</NavLink>
+                            <h4>English (IN)</h4>
                         </div>
-                        <div className="footer-leg">
+                        <div className="footer-leg" onClick={() => toggleModal('currency')}>
                             <span>₹</span>
-                            <NavLink to={'/'}> INR</NavLink>
+                            <h4> INR</h4>
                         </div>
                         <div className="footer-media">
-                            <NavLink to={'/'}><FacebookIco /> </NavLink>
-                            <NavLink to={'/'}><TwitterIco /> </NavLink>
-                            <NavLink to={'/'}><InstagramIco /> </NavLink>
+                            <NavLink to={'https://www.facebook.com/AirbnbIndia'} target='_blank'><FacebookIco /> </NavLink>
+                            <NavLink to={'https://x.com/airbnb_in'} target='_blank'><TwitterIco /> </NavLink>
+                            <NavLink to={'https://www.instagram.com/airbnb/'} target='_blank'><InstagramIco /> </NavLink>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <Modal isOpen={isModalOpen} toggleModal={toggleModal} activeTab={activeTab} />
         </div>
-    )
+    );
 }

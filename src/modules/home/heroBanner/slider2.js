@@ -6,11 +6,14 @@ import {
 import UploadIco from '../../../assets/images/svg/uploadIco';
 import RightScrollIco from '../../../assets/images/svg/rightScrollIco';
 import LeftScrollIco from '../../../assets/images/svg/leftScrollIco';
+import Modal from './uploadModal';
 
 export default function Slider2() {
     const [currentIndex, setCurrentIndex] = useState(Array(16).fill(0));
     const [dragStartX, setDragStartX] = useState(null);
     const [dragging, setDragging] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedContent, setSelectedContent] = useState(null);
     const imageWrapperRef = useRef(null);
 
     const imageSets = [
@@ -114,6 +117,17 @@ export default function Slider2() {
         setDragging(false);
     };
 
+    const handleOpenModal = (index) => {
+        const selectedImage = imageSets[index][0];
+        const selectedText = textContent[index].h3;
+        setSelectedContent({ image: selectedImage, h3: selectedText });
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <div className="past-expireance">
             <div className='container'>
@@ -122,7 +136,7 @@ export default function Slider2() {
                     {imageSets.map((images, index) => (
                         <div className="slider-div" key={index}>
                             <div className="slider-image-div">
-                                <div className="upload">
+                                <div className="upload" onClick={() => handleOpenModal(index)}>
                                     <UploadIco />
                                 </div>
                                 <div
@@ -162,7 +176,7 @@ export default function Slider2() {
                                 </div>
                                 <div className="track-buttons">
                                     {images.map((_, imgIndex) => (
-                                        <button  aria-label="track button"
+                                        <button aria-label="track button"
                                             key={imgIndex}
                                             className={`track-btn ${currentIndex[index] === imgIndex ? 'active' : ''}`}
                                             onClick={() => handleTrackClick(index, imgIndex)} />
@@ -178,6 +192,10 @@ export default function Slider2() {
                     ))}
                 </div>
             </div>
+
+            {isModalOpen && selectedContent && (
+                <Modal onClose={handleCloseModal} content={selectedContent} />
+            )}
         </div>
     );
 }
