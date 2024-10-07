@@ -1,20 +1,68 @@
 
 
 // selectionbar icons
-import views from './sliderIcons/views.webp';
-import pools from './sliderIcons/pools.webp';
-import farms from './sliderIcons/farms.webp';
-import islands from './sliderIcons/islands.webp';
-import caves from './sliderIcons/caves.webp';
-import omg from './sliderIcons/omg.webp';
-import luxe from './sliderIcons/luxe.webp';
-import castles from './sliderIcons/castles.webp';
+import adapted from './sliderIcons/adapted.webp';
+import aframes from './sliderIcons/aframes.webp';
+import arctic from './sliderIcons/arctic.webp';
+import barns from './sliderIcons/barns.webp';
+import beach from './sliderIcons/beach.webp';
 import beachfront from './sliderIcons/beachfront.webp';
+import bedBreakfast from './sliderIcons/bedBreakfast.webp';
+import boats from './sliderIcons/boats.webp';
 import cabins from './sliderIcons/cabins.webp';
-import rooms from './sliderIcons/rooms.webp';
-import tinyHomes from './sliderIcons/tinyHomes.webp';
-import topWorld from './sliderIcons/topWorld.webp';
+import camper from './sliderIcons/camper.webp';
+import camping from './sliderIcons/camping.webp';
+import casas from './sliderIcons/casas.webp';
+import castles from './sliderIcons/castles.webp';
+import caves from './sliderIcons/caves.webp';
+import chefKitchen from './sliderIcons/chefKitchen.webp';
+import container from './sliderIcons/container.webp';
+import countryside from './sliderIcons/countryside.webp';
+import creative from './sliderIcons/creative.webp';
+import cycladic from './sliderIcons/cycladic.webp';
+import dammusi from './sliderIcons/dammusi.webp';
+import desert from './sliderIcons/desert.webp';
+import design from './sliderIcons/design.webp';
+import domes from './sliderIcons/domes.webp';
+import eartHomes from './sliderIcons/eartHomes.webp';
+import farms from './sliderIcons/farms.webp';
+import golfing from './sliderIcons/golfing.webp';
+import hanoks from './sliderIcons/hanoks.webp';
+import historicalHomes from './sliderIcons/historicalHomes.webp';
+import houseBoat from './sliderIcons/houseBoat.webp';
+import huts from './sliderIcons/huts.webp';
 import icons from './sliderIcons/icons.webp';
+import islands from './sliderIcons/islands.webp';
+import lake from './sliderIcons/lake.webp';
+import lakeFront from './sliderIcons/lakeFront.webp';
+import luxe from './sliderIcons/luxe.webp';
+import mansions from './sliderIcons/mansions.webp';
+import minsus from './sliderIcons/minsus.webp';
+import nationalParks from './sliderIcons/nationalParks.webp';
+import newkey from './sliderIcons/new.webp';
+import offGrid from './sliderIcons/offGrid.webp';
+import omg from './sliderIcons/omg.webp';
+import pianos from './sliderIcons/pianos.webp';
+import play from './sliderIcons/play.webp';
+import pools from './sliderIcons/pools.webp';
+import raids from './sliderIcons/raids.webp';
+import rooms from './sliderIcons/rooms.webp';
+import ryokans from './sliderIcons/ryokans.webp';
+import ski from './sliderIcons/ski.webp';
+import skilling from './sliderIcons/skilling.webp';
+import surfing from './sliderIcons/surfing.webp';
+import tinyHomes from './sliderIcons/tinyHomes.webp';
+import topCities from './sliderIcons/topCities.webp';
+import topWorld from './sliderIcons/topWorld.webp';
+import tower from './sliderIcons/tower.webp';
+import tranding from './sliderIcons/tranding.webp';
+import treeHouse from './sliderIcons/treeHouse.webp';
+import tropical from './sliderIcons/tropical.webp';
+import trulli from './sliderIcons/trulli.webp';
+import views from './sliderIcons/views.webp';
+import vineYards from './sliderIcons/vineYards.webp';
+import windmills from './sliderIcons/windmills.webp';
+import yurts from './sliderIcons/yurts.webp';
 
 
 import mainBlock5 from './webp/mainBlock5.webp';
@@ -157,8 +205,8 @@ import sixteen3 from './card/16.2.webp';
 import sixteen4 from './card/16.3.webp';
 
 export {
-  views, pools, farms, islands, caves, omg, luxe, castles, beachfront, cabins, rooms, tinyHomes, topWorld, icons,
-  
+  adapted, aframes, arctic, barns, beach, beachfront, bedBreakfast, boats, cabins, camper, camping, casas, castles, caves, chefKitchen, container, countryside, creative, cycladic, dammusi, desert, design, domes, eartHomes, farms, golfing, hanoks, historicalHomes, houseBoat, huts, icons, islands, lake, lakeFront, luxe, mansions, minsus, nationalParks, newkey, offGrid, omg, pianos, play, pools, raids, rooms, ryokans, ski, skilling, surfing, tinyHomes, topCities, topWorld, tower, tranding, treeHouse, tropical, trulli, views, vineYards, windmills, yurts,
+
   mainBlock6, past1, past2, past3, past4, past6, past7, past8, past9, past10, past11, past12, past13, past14, past15, past16, past5, kevin1, kevin2, kevin3, kevin4, train1, train2, train3, train4, mainBlock1, mainBlock2, mainBlock3, mainBlock4, mainBlock5, polly1, polly2, polly3, polly4, polly5, polly6, polly7, polly8, polly9, polly10, polly11, polly12, placeIco1, placeIco2, placeIco3, placeIco4, placeIco5, placeIco6, placeIco7, placeIco8, placeIco9, placeIco10, placeIco11, placeIco12, placeIco13, placeIco14, placeIco15, placeIco16, placeIco17, placeIco18, placeIco19, placeIco20, placeIco21, placeIco22, placeIco23, placeIco24, placeIco25, placeIco26, placeIco27, placeIco28, placeIco29, placeIco30,
 
   one1, one2, one3, one4, two1, two2, two3, two4, three1, three2, three3, three4, four1, four2, four3, four4, five1, five2, five3, five4, six1, six2, six3, six4, seven1, seven2, seven3, seven4, eight1, eight2, eight3, eight4, nine1, nine2, nine3, nine4, ten1, ten2, ten3, ten4, eleven1, eleven2, eleven3, eleven4, twelve1, twelve2, twelve3, twelve4, thirteen1, thirteen2, thirteen3, thirteen4, fourteen1, fourteen2, fourteen3, fourteen4, fifteen1, fifteen2, fifteen3, fifteen4, sixteen1, sixteen2, sixteen3, sixteen4,
