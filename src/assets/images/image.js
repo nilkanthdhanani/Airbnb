@@ -1,17 +1,22 @@
 
-import views from './webp/views.webp';
-import pools from './webp/pools.webp';
-import farms from './webp/farms.webp';
-import islands from './webp/islands.webp';
-import caves from './webp/caves.webp';
-import omg from './webp/omg.webp';
-import luxe from './webp/luxe.webp';
-import castles from './webp/castles.webp';
-import beachfront from './webp/beachfront.webp';
-import cabins from './webp/cabins.webp';
-import rooms from './webp/rooms.webp';
-import tinyHomes from './webp/tinyHomes.webp';
-import topWorld from './webp/topWorld.webp';
+
+// selectionbar icons
+import views from './sliderIcons/views.webp';
+import pools from './sliderIcons/pools.webp';
+import farms from './sliderIcons/farms.webp';
+import islands from './sliderIcons/islands.webp';
+import caves from './sliderIcons/caves.webp';
+import omg from './sliderIcons/omg.webp';
+import luxe from './sliderIcons/luxe.webp';
+import castles from './sliderIcons/castles.webp';
+import beachfront from './sliderIcons/beachfront.webp';
+import cabins from './sliderIcons/cabins.webp';
+import rooms from './sliderIcons/rooms.webp';
+import tinyHomes from './sliderIcons/tinyHomes.webp';
+import topWorld from './sliderIcons/topWorld.webp';
+import icons from './sliderIcons/icons.webp';
+
+
 import mainBlock5 from './webp/mainBlock5.webp';
 import mainBlock6 from './webp/mainBlock6.webp';
 import past1 from './webp/past1.webp';
@@ -38,7 +43,6 @@ import train1 from './webp/train1.webp';
 import train2 from './webp/train2.webp';
 import train3 from './webp/train3.webp';
 import train4 from './webp/train4.webp';
-import icons from './webp/icons.webp';
 import mainBlock1 from './webp/mainBlock1.webp';
 import mainBlock2 from './webp/mainBlock2.webp';
 import mainBlock3 from './webp/mainBlock3.webp';
@@ -86,6 +90,7 @@ import placeIco28 from './webp/placeIco28.webp';
 import placeIco29 from './webp/placeIco29.webp';
 import placeIco30 from './webp/placeIco30.webp';
 
+// slider cards
 import one1 from './card/1.webp';
 import one2 from './card/1.1.webp';
 import one3 from './card/1.2.webp';
@@ -152,9 +157,9 @@ import sixteen3 from './card/16.2.webp';
 import sixteen4 from './card/16.3.webp';
 
 export {
-  views, pools, farms, islands, caves, omg, luxe, castles, beachfront, cabins, rooms, tinyHomes, topWorld, mainBlock6, past1, past2, past3, past4, past6, past7, past8, past9, past10, past11, past12, past13, past14, past15, past16, past5, kevin1, kevin2, kevin3, kevin4, train1, train2, train3, train4,
-
-  icons, mainBlock1, mainBlock2, mainBlock3, mainBlock4, mainBlock5, polly1, polly2, polly3, polly4, polly5, polly6, polly7, polly8, polly9, polly10, polly11, polly12, placeIco1, placeIco2, placeIco3, placeIco4, placeIco5, placeIco6, placeIco7, placeIco8, placeIco9, placeIco10, placeIco11, placeIco12, placeIco13, placeIco14, placeIco15, placeIco16, placeIco17, placeIco18, placeIco19, placeIco20, placeIco21, placeIco22, placeIco23, placeIco24, placeIco25, placeIco26, placeIco27, placeIco28, placeIco29, placeIco30,
+  views, pools, farms, islands, caves, omg, luxe, castles, beachfront, cabins, rooms, tinyHomes, topWorld, icons,
+  
+  mainBlock6, past1, past2, past3, past4, past6, past7, past8, past9, past10, past11, past12, past13, past14, past15, past16, past5, kevin1, kevin2, kevin3, kevin4, train1, train2, train3, train4, mainBlock1, mainBlock2, mainBlock3, mainBlock4, mainBlock5, polly1, polly2, polly3, polly4, polly5, polly6, polly7, polly8, polly9, polly10, polly11, polly12, placeIco1, placeIco2, placeIco3, placeIco4, placeIco5, placeIco6, placeIco7, placeIco8, placeIco9, placeIco10, placeIco11, placeIco12, placeIco13, placeIco14, placeIco15, placeIco16, placeIco17, placeIco18, placeIco19, placeIco20, placeIco21, placeIco22, placeIco23, placeIco24, placeIco25, placeIco26, placeIco27, placeIco28, placeIco29, placeIco30,
 
   one1, one2, one3, one4, two1, two2, two3, two4, three1, three2, three3, three4, four1, four2, four3, four4, five1, five2, five3, five4, six1, six2, six3, six4, seven1, seven2, seven3, seven4, eight1, eight2, eight3, eight4, nine1, nine2, nine3, nine4, ten1, ten2, ten3, ten4, eleven1, eleven2, eleven3, eleven4, twelve1, twelve2, twelve3, twelve4, thirteen1, thirteen2, thirteen3, thirteen4, fourteen1, fourteen2, fourteen3, fourteen4, fifteen1, fifteen2, fifteen3, fifteen4, sixteen1, sixteen2, sixteen3, sixteen4,
 };
