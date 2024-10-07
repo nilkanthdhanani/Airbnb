@@ -209,3 +209,13 @@
         }
     }
 }
+
+.no-scroll {
+    position: fixed;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.no-scroll::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.5);
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './sidebar.scss';
 import CloseIco from '../../assets/images/svg/closeIco';
 import ExploreIco from '../../assets/images/svg/exploreIco';
@@ -7,6 +7,22 @@ import ExpContent from './sideContent/expContent';
 
 export default function Sidebar({ isOpen, toggleSidebar }) {
     const [activeSection, setActiveSection] = useState('stays');
+
+    useEffect(() => {
+        const toggleNoScroll = () => {
+            if (isOpen) {
+                document.body.classList.add('disable-scroll');
+            } else {
+                document.body.classList.remove('disable-scroll');
+            }
+        };
+
+        toggleNoScroll();
+
+        return () => {
+            document.body.classList.remove('disable-scroll');
+        };
+    }, [isOpen]);
 
     return (
         <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
@@ -35,20 +51,14 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
                     </div>
 
                     <div className="aside-content">
-                        {activeSection === 'stays' && (
-                            <StayContent />
-                        )}
-                        {activeSection === 'experiences' && (
-                            <ExpContent />
-                        )}
+                        {activeSection === 'stays' && <StayContent />}
+                        {activeSection === 'experiences' && <ExpContent />}
                     </div>
                 </div>
 
                 <div className="aside-footer">
                     <div className="clear-all-btn">
-                        <button>
-                            Clear all
-                        </button>
+                        <button>Clear all</button>
                     </div>
                     <div className="search-btn">
                         <button>

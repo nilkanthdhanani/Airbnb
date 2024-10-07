@@ -236,7 +236,7 @@ nav {
     }
 }
 
-.close-btn-modal {
+.close-btn-modal, .login-close-btn {
     button {
         width: 32px;
         height: 32px;
@@ -258,5 +258,26 @@ nav {
             background-color: var(--bg-hover2);
             transition: 0.3s ease-in-out;
         }
+    }
+}
+
+.login-close-btn {
+    button {
+        position: absolute;
+        top: 16px;
+    }
+}
+
+.login-modal-content-div {
+    button {
+        width: 100%;
+        padding: 14px 24px;
+        background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
     }
 }

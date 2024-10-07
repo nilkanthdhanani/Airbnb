@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from '../common/header'
-import Footer from '../comm0n/footer'
+import Footer from '../common/footer'
 import Selectionbar from '../common/selectionbar'
 import HeaderBottom from '../common/headerBottom'
 

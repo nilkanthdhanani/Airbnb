@@ -8,36 +8,21 @@ import MenuIco from '../../assets/images/svg/menuIco';
 import SearchIco from '../../assets/images/svg/searchIco';
 import Sidebar from '../sidebar';
 import Modal from '../modal';
+import LoginModal from '../loginModal';
 
 export default function Header() {
   const [activeButton, setActiveButton] = useState('stays');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('language');
   const dropDownRef = useRef(null);
   const userButtonRef = useRef(null);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
-    if (!isSidebarOpen) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
   };
-
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-
-    return () => {
-      document.body.classList.remove('no-scroll');
-    };
-  }, [isModalOpen]);
 
   const toggleDropDown = () => {
     setIsDropDownOpen(!isDropDownOpen);
@@ -46,6 +31,10 @@ export default function Header() {
   const toggleModal = (tab) => {
     setIsModalOpen(!isModalOpen);
     setActiveTab(tab);
+  };
+
+  const toggleLoginModal = () => {
+    setIsLoginModalOpen(!isLoginModalOpen);
   };
 
   useEffect(() => {
@@ -110,12 +99,12 @@ export default function Header() {
               </button>
               {isDropDownOpen && (
                 <div className="drop-down" ref={dropDownRef}>
-                  <NavLink to="/" onClick={() => setIsDropDownOpen(false)}>Sign up</NavLink>
-                  <NavLink to="/" onClick={() => setIsDropDownOpen(false)}>Log In</NavLink>
+                  <NavLink onClick={() => { setIsDropDownOpen(false); toggleLoginModal(); }}>Sign up</NavLink>
+                  <NavLink onClick={() => { setIsDropDownOpen(false); toggleLoginModal(); }}>Log In</NavLink>
                   <div className="drop-down-border"></div>
-                  <NavLink to="/" onClick={() => setIsDropDownOpen(false)}>Airbnb your home</NavLink>
-                  <NavLink to="/" onClick={() => setIsDropDownOpen(false)}>Host an experience</NavLink>
-                  <NavLink to="/" onClick={() => setIsDropDownOpen(false)}>Help Center</NavLink>
+                  <NavLink to={"/"} onClick={() => setIsDropDownOpen(false)}>Airbnb your home</NavLink>
+                  <NavLink to={"/"} onClick={() => setIsDropDownOpen(false)}>Host an experience</NavLink>
+                  <NavLink to={"/"} onClick={() => setIsDropDownOpen(false)}>Help Center</NavLink>
                 </div>
               )}
             </div>
@@ -141,6 +130,7 @@ export default function Header() {
 
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <Modal isOpen={isModalOpen} toggleModal={toggleModal} activeTab={activeTab} />
+      <LoginModal isOpen={isLoginModalOpen} toggleLoginModal={toggleLoginModal} />
     </header>
   );
 }

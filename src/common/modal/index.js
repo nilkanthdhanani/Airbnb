@@ -24,12 +24,20 @@ export default function Modal({ isOpen, toggleModal, activeTab }) {
             }
         };
 
-        window.addEventListener('resize', handleResize);
+        const toggleNoScroll = () => {
+            if (isOpen) {
+                document.body.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+            }
+        };
 
-        handleResize();
-        
+        window.addEventListener('resize', handleResize);
+        toggleNoScroll();
+
         return () => {
             window.removeEventListener('resize', handleResize);
+            document.body.classList.remove('no-scroll');
         };
     }, [isOpen, toggleModal]);
 
