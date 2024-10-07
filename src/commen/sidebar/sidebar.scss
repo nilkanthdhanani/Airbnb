@@ -74,12 +74,9 @@ aside {
 }
 
 .no-scroll {
-    // position: fixed;
-    // width: 100%;
-    // overflow-y: scroll;
-
-    overflow: hidden;
-    margin-right: 16px;
+    position: fixed;
+    width: 100%;
+    overflow-y: scroll;
 }
 
 .no-scroll::-webkit-scrollbar {

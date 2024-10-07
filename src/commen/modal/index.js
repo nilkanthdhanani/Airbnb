@@ -27,7 +27,7 @@ export default function Modal({ isOpen, toggleModal, activeTab }) {
         window.addEventListener('resize', handleResize);
 
         handleResize();
-
+        
         return () => {
             window.removeEventListener('resize', handleResize);
         };

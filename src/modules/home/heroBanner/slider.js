@@ -6,7 +6,7 @@ import {
 import UploadIco from '../../../assets/images/svg/uploadIco';
 import RightScrollIco from '../../../assets/images/svg/rightScrollIco';
 import LeftScrollIco from '../../../assets/images/svg/leftScrollIco';
-import Modal from './uploadModal';
+import UploadModal from './uploadModal';
 
 export default function Slider() {
     const [currentIndex, setCurrentIndex] = useState([0, 0, 0, 0, 0, 0]);
@@ -176,7 +176,7 @@ export default function Slider() {
             </div>
 
             {isModalOpen && selectedContent && (
-                <Modal onClose={handleCloseModal} content={selectedContent} />
+                <UploadModal onClose={handleCloseModal} content={selectedContent} />
             )}
         </div>
     );
