@@ -236,7 +236,8 @@ nav {
     }
 }
 
-.close-btn-modal, .login-close-btn {
+.close-btn-modal,
+.login-close-btn {
     button {
         width: 32px;
         height: 32px;
@@ -268,16 +269,23 @@ nav {
     }
 }
 
-.login-modal-content-div {
+.login-modal-content-div,
+.wishlist {
     button {
         width: 100%;
         padding: 14px 24px;
-        background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+        background: linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%);
         border: none;
         border-radius: 8px;
         font-size: 16px;
         font-weight: 500;
         color: #fff;
         cursor: pointer;
+    }
+}
+
+.wishlist {
+    button {
+        width: auto;
     }
 }

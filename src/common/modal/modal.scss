@@ -107,7 +107,7 @@
                             align-items: center;
                             gap: 8px;
                             @include font16;
-                            line-height: 1.25rem;
+                            line-height: 20px;
                             color: var(--font-color);
                         }
 
@@ -115,7 +115,7 @@
                             margin-top: 8px;
                             color: var(--font-color2);
                             @include font14;
-                            line-height: 1.25rem;
+                            line-height: 20px;
                         }
 
                         .auto-button {

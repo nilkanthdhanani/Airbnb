@@ -1,0 +1,26 @@
+@import '../../styles/typography/typography';
+
+.wishlist {
+    padding: 36px 24px;
+    min-height: 110vh;
+
+    h2 {
+        @include pastHead;
+        letter-spacing: -0.04rem;
+        color: var(--font-color);
+        margin-bottom: 40px;
+    }
+
+    h3 {
+        @include footerHead;
+        letter-spacing: -0.01375rem;
+        color: var(--font-color);
+    }
+
+    p {
+        @include font14;
+        line-height: 20px;
+        margin: 8px 0 24px 0;
+        color: var(--font-color2);
+    }
+}

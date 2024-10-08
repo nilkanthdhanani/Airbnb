@@ -1,20 +1,26 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Header from '../common/header'
-import Footer from '../common/footer'
-import Selectionbar from '../common/selectionbar'
-import HeaderBottom from '../common/headerBottom'
+import React from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import Header from '../common/header';
+import Footer from '../common/footer';
+import Selectionbar from '../common/selectionbar';
+import HeaderBottom from '../common/headerBottom';
 
 export default function DefaultLayout() {
+  const location = useLocation();
+
+  const hideHeaderAndFooter = location.pathname === '/wishlists' || location.pathname === '/login';
+
   return (
     <>
-      <div className="header-main">
-        <Header />
-        <Selectionbar />
-      </div>
+      {!hideHeaderAndFooter && (
+        <div className="header-main">
+          <Header />
+          <Selectionbar />
+        </div>
+      )}
       <Outlet />
-      <Footer />
+      {!hideHeaderAndFooter && <Footer />}
       <HeaderBottom />
     </>
-  )
+  );
 }
