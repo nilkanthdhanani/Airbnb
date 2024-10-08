@@ -17,20 +17,6 @@ export default function Modal({ isOpen, toggleModal, activeTab }) {
         setCurrentTab(tab);
     };
 
-    // Add/remove no-scroll class on body when modal is open
-    useEffect(() => {
-        if (isOpen) {
-            document.body.classList.add('no-scroll');
-        } else {
-            document.body.classList.remove('no-scroll');
-        }
-
-        // Cleanup function to remove class when component unmounts or modal closes
-        return () => {
-            document.body.classList.remove('no-scroll');
-        };
-    }, [isOpen]);
-
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 768 && isOpen) {
@@ -38,10 +24,20 @@ export default function Modal({ isOpen, toggleModal, activeTab }) {
             }
         };
 
+        const toggleNoScroll = () => {
+            if (isOpen) {
+                document.body.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+            }
+        };
+
         window.addEventListener('resize', handleResize);
+        toggleNoScroll();
 
         return () => {
             window.removeEventListener('resize', handleResize);
+            document.body.classList.remove('no-scroll');
         };
     }, [isOpen, toggleModal]);
 

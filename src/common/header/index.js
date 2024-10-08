@@ -56,6 +56,18 @@ export default function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [isModalOpen]);
+
   return (
     <header>
       <div className="container">
