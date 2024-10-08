@@ -29,8 +29,8 @@ export default function Header() {
   };
 
   const toggleModal = (tab) => {
-    setIsModalOpen(!isModalOpen);
     setActiveTab(tab);
+    setIsModalOpen(!isModalOpen);
   };
 
   const toggleLoginModal = () => {
