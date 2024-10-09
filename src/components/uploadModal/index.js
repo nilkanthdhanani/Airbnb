@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './uploadModal.scss';
-import CloseModalIco from '../../../../assets/images/svg/closeModalIco';
-import CopyIco from '../../../../assets/images/svg/copyIco';
-import EmailIco from '../../../../assets/images/svg/emailIco';
-import MessageIco from '../../../../assets/images/svg/messageIco';
-import WhatsAppIco from '../../../../assets/images/svg/whatsappIco';
-import MessengerIco from '../../../../assets/images/svg/messengerIco';
-import FacebookIco2 from '../../../../assets/images/svg/facebookIco2';
-import TwitterIco2 from '../../../../assets/images/svg/twitterIco2';
-import MoreOptionIco from '../../../../assets/images/svg/moreOptionIco';
+import CloseModalIco from '../../assets/images/svg/closeModalIco';
+import CopyIco from '../../assets/images/svg/copyIco';
+import EmailIco from '../../assets/images/svg/emailIco';
+import MessageIco from '../../assets/images/svg/messageIco';
+import WhatsAppIco from '../../assets/images/svg/whatsappIco';
+import MessengerIco from '../../assets/images/svg/messengerIco';
+import FacebookIco2 from '../../assets/images/svg/facebookIco2';
+import TwitterIco2 from '../../assets/images/svg/twitterIco2';
+import MoreOptionIco from '../../assets/images/svg/moreOptionIco';
 import { NavLink } from 'react-router-dom';
 
 export default function UploadModal({ onClose, content }) {

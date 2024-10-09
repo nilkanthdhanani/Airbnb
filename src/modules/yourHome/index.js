@@ -1,5 +1,4 @@
 import React from 'react'
-import './yourHome.scss'
 
 export default function YourHome() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import Slider from './heroBanner/slider'
-import Slider2 from './heroBanner/slider2'
+import Slider from './sliders/slider'
+import Slider2 from './sliders/slider2'
 
 export default function Home() {
   return (
