@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import './sideContent.scss';
 import { placeIco21, placeIco22, placeIco23, placeIco24, placeIco25, placeIco26, placeIco27, placeIco28, placeIco29, placeIco30, } from '../../../assets/images/image';
 import ExploreIco from '../../../assets/images/svg/exploreIco';

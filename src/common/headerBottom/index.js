@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import './headerBottom.scss';
 import ExploreIco from '../../assets/images/svg/exploreIco';
 import HeartIco from '../../assets/images/svg/heartIco';

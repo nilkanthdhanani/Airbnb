@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import './sidebar.scss';
 import CloseIco from '../../assets/images/svg/closeIco';
 import ExploreIco from '../../assets/images/svg/exploreIco';

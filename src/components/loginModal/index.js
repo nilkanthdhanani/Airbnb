@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import './loginModal.scss';
 import CloseModalIco from '../../assets/images/svg/closeModalIco';
 import SelectDropIco from '../../assets/images/svg/selectDropIco';

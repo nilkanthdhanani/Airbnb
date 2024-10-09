@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from "react";
 import './selectionbar.scss';
 import { adapted, aframes, arctic, barns, beach, beachfront, bedBreakfast, boats, cabins, camper, camping, casas, castles, caves, chefKitchen, container, countryside, creative, cycladic, dammusi, desert, design, domes, eartHomes, farms, golfing, hanoks, historicalHomes, houseBoat, huts, icons, islands, lake, lakeFront, luxe, mansions, minsus, nationalParks, newkey, offGrid, omg, pianos, play, pools, raids, rooms, ryokans, ski, skilling, surfing, tinyHomes, topCities, topWorld, tower, tranding, treeHouse, tropical, trulli, views, vineYards, windmills, yurts } from '../../assets/images/image';
 import RightScrollIco from '../../assets/images/svg/rightScrollIco';

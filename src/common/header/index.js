@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import './header.scss';
 import Logo from '../../assets/images/svg/logoIco';
 import { NavLink } from 'react-router-dom';

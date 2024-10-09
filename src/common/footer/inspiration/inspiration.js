@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import '../footer.scss';
+import React, { useState, useRef, useEffect } from "react";
+import "../footer.scss";
 import Popular from './popular';
 import ArtsCulture from './artsCulture';
 import Outdoors from './outdoors';

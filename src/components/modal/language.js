@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import './modal.scss';
 import LanguageIco from '../../assets/images/svg/languageIco';
 import RightIco from '../../assets/images/svg/rightIco';

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef } from "react";
 import './slider.scss';
 import {
     mainBlock1, mainBlock2, polly1, polly2, polly3, polly4, polly6, polly7, polly8, polly9, polly10, polly11, polly12, kevin1, kevin2, kevin3, kevin4, train1, train2, train3, train4, polly5

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import '../footer.scss';
+import React, { useEffect, useState } from "react";
+import "../footer.scss";
 import DropIco from '../../../assets/images/svg/dropIco';
 
 const popularDestinations = [

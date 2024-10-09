@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import Slider from './sliders/slider'
 import Slider2 from './sliders/slider2'
 
