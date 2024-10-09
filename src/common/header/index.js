@@ -7,8 +7,8 @@ import UserIco from '../../assets/images/svg/userIcon';
 import MenuIco from '../../assets/images/svg/menuIco';
 import SearchIco from '../../assets/images/svg/searchIco';
 import Sidebar from '../sidebar';
-import Modal from '../modal';
-import LoginModal from '../loginModal';
+import Modal from '../../components/modal';
+import LoginModal from '../../components/loginModal';
 
 export default function Header() {
   const [activeButton, setActiveButton] = useState('stays');
@@ -93,7 +93,7 @@ export default function Header() {
           </nav>
           <div className="user">
             <div className="home-button">
-              <NavLink to={"/"}>Airbnb your home</NavLink>
+              <NavLink to={"/yourhome"}>Airbnb your home</NavLink>
             </div>
             <div className="search-button" onClick={() => toggleModal('language')}>
               <NavLink aria-label="search earth">

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './footer.scss';
 import { NavLink } from 'react-router-dom';
 import WorldIco from '../../assets/images/svg/worldIco';
 import FacebookIco from '../../assets/images/svg/facebookIco';
 import TwitterIco from '../../assets/images/svg/twitterIco';
 import InstagramIco from '../../assets/images/svg/instagramIco';
-import Modal from '../modal';
+import Modal from '../../components/modal';
 
 export default function FooterList() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,8 +13,23 @@ export default function FooterList() {
 
     const toggleModal = (tab) => {
         setActiveTab(tab);
-        setIsModalOpen(!isModalOpen);
+        setIsModalOpen((prev) => {
+            const newIsModalOpen = !prev;
+            if (newIsModalOpen) {
+                document.body.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+            }
+            return newIsModalOpen;
+        });
     };
+
+    useEffect(() => {
+        // Cleanup the no-scroll class when the component unmounts or modal closes
+        return () => {
+            document.body.classList.remove('no-scroll');
+        };
+    }, []);
 
     return (
         <div className='footer-list'>

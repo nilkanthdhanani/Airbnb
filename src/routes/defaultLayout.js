@@ -9,10 +9,11 @@ export default function DefaultLayout() {
   const location = useLocation();
 
   const hideHeaderAndFooter = location.pathname === '/wishlists' || location.pathname === '/login';
+  const hideHeader = location.pathname === '/yourhome';
 
   return (
     <>
-      {!hideHeaderAndFooter && (
+      {!hideHeaderAndFooter && !hideHeader && (
         <div className="header-main">
           <Header />
           <Selectionbar />
