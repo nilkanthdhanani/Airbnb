@@ -37,29 +37,29 @@ export default function FooterList() {
                 <div className="footer-list-link">
                     <div className="footer-link-box">
                         <h3>Support</h3>
-                        <NavLink to={'/'}>Help Centre</NavLink>
-                        <NavLink to={'/'}>AirCover</NavLink>
-                        <NavLink to={'/'}>Anti-discrimination</NavLink>
-                        <NavLink to={'/'}>Disability support</NavLink>
-                        <NavLink to={'/'}>Cancellation options</NavLink>
-                        <NavLink to={'/'}>Report neighbourhood concern</NavLink>
+                        <NavLink>Help Centre</NavLink>
+                        <NavLink>AirCover</NavLink>
+                        <NavLink>Anti-discrimination</NavLink>
+                        <NavLink>Disability support</NavLink>
+                        <NavLink>Cancellation options</NavLink>
+                        <NavLink>Report neighbourhood concern</NavLink>
                     </div>
                     <div className="footer-link-box">
                         <h3>Hosting</h3>
-                        <NavLink to={'/'}>Airbnb your home</NavLink>
-                        <NavLink to={'/'}>AirCover for Hosts</NavLink>
-                        <NavLink to={'/'}>Hosting resources</NavLink>
-                        <NavLink to={'/'}>Community forum</NavLink>
-                        <NavLink to={'/'}>Hosting responsibly</NavLink>
-                        <NavLink to={'/'}>Join a free Hosting class</NavLink>
+                        <NavLink>Airbnb your home</NavLink>
+                        <NavLink>AirCover for Hosts</NavLink>
+                        <NavLink>Hosting resources</NavLink>
+                        <NavLink>Community forum</NavLink>
+                        <NavLink>Hosting responsibly</NavLink>
+                        <NavLink>Join a free Hosting class</NavLink>
                     </div>
                     <div className="footer-link-box">
                         <h3>Airbnb</h3>
-                        <NavLink to={'/'}>Newsroom</NavLink>
-                        <NavLink to={'/'}>New features</NavLink>
-                        <NavLink to={'/'}>Careers</NavLink>
-                        <NavLink to={'/'}>Investors</NavLink>
-                        <NavLink to={'/'}>Airbnb.org emergency stays</NavLink>
+                        <NavLink>Newsroom</NavLink>
+                        <NavLink>New features</NavLink>
+                        <NavLink>Careers</NavLink>
+                        <NavLink>Investors</NavLink>
+                        <NavLink>Airbnb.org emergency stays</NavLink>
                     </div>
                 </div>
                 <div className="footer-list-copy">
@@ -67,13 +67,13 @@ export default function FooterList() {
                         <p>© 2024 Airbnb, Inc.</p>
                         <div className="term-list">
                             <span>·</span>
-                            <NavLink to={'/'}>Privacy</NavLink>
+                            <NavLink>Privacy</NavLink>
                             <span>·</span>
-                            <NavLink to={'/'}>Terms</NavLink>
+                            <NavLink>Terms</NavLink>
                             <span>·</span>
-                            <NavLink to={'/'}>Sitemap</NavLink>
+                            <NavLink>Sitemap</NavLink>
                             <span>·</span>
-                            <NavLink to={'/'}>Company details</NavLink>
+                            <NavLink>Company details</NavLink>
                         </div>
                     </div>
                     <div className="footer-copy-div2">

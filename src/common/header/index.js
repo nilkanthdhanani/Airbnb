@@ -114,9 +114,9 @@ export default function Header() {
                   <NavLink onClick={() => { setIsDropDownOpen(false); toggleLoginModal(); }}>Sign up</NavLink>
                   <NavLink onClick={() => { setIsDropDownOpen(false); toggleLoginModal(); }}>Log In</NavLink>
                   <div className="drop-down-border"></div>
-                  <NavLink to={"/"} onClick={() => setIsDropDownOpen(false)}>Airbnb your home</NavLink>
-                  <NavLink to={"/"} onClick={() => setIsDropDownOpen(false)}>Host an experience</NavLink>
-                  <NavLink to={"/"} onClick={() => setIsDropDownOpen(false)}>Help Center</NavLink>
+                  <NavLink onClick={() => setIsDropDownOpen(false)}>Airbnb your home</NavLink>
+                  <NavLink onClick={() => setIsDropDownOpen(false)}>Host an experience</NavLink>
+                  <NavLink onClick={() => setIsDropDownOpen(false)}>Help Center</NavLink>
                 </div>
               )}
             </div>
