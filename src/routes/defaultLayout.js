@@ -14,12 +14,14 @@ export default function DefaultLayout() {
   return (
     <>
       {!hideHeaderAndFooter && !hideHeader && (
-        <div className="header-main">
+        <header>
           <Header />
           <Selectionbar />
-        </div>
+        </header>
       )}
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       {!hideHeaderAndFooter && <Footer />}
       {!hideHeader && <HeaderBottom />}
     </>

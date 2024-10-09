@@ -69,7 +69,7 @@ export default function Header() {
   }, [isModalOpen]);
 
   return (
-    <header>
+    <div className="header-main">
       <div className="container">
         <div className="header-div">
           <div className="logo">
@@ -143,6 +143,6 @@ export default function Header() {
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <Modal isOpen={isModalOpen} toggleModal={toggleModal} activeTab={activeTab} />
       <LoginModal isOpen={isLoginModalOpen} toggleLoginModal={toggleLoginModal} />
-    </header>
+    </div>
   );
 }
