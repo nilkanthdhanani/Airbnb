@@ -129,7 +129,7 @@ export default function Slider2() {
     };
 
     return (
-        <div className="past-expireance">
+        <section className="past-expireance">
             <div className='container'>
                 <h2>Past experiences</h2>
                 <div className="slider">
@@ -196,6 +196,6 @@ export default function Slider2() {
             {isModalOpen && selectedContent && (
                 <UploadModal onClose={handleCloseModal} content={selectedContent} />
             )}
-        </div>
+        </section>
     );
 }

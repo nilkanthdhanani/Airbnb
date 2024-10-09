@@ -109,7 +109,7 @@ export default function Slider() {
     };
 
     return (
-        <div className="past-expireance">
+        <section className="past-expireance">
             <div className='container'>
                 <div className="slider">
                     {imageSets.map((images, index) => (
@@ -178,6 +178,6 @@ export default function Slider() {
             {isModalOpen && selectedContent && (
                 <UploadModal onClose={handleCloseModal} content={selectedContent} />
             )}
-        </div>
+        </section>
     );
 }
