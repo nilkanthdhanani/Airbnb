@@ -289,3 +289,71 @@ nav {
         width: auto;
     }
 }
+
+.earn-div {
+    button {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 40px;
+        background-color: var(--color-white);
+        border: 1px solid var(--border-button);
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 16px;
+        cursor: pointer;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--logo-color);
+        }
+
+        .button-content {
+            text-align: left;
+
+            p {
+                color: var(--font-color);
+                @include font16;
+                font-weight: 500;
+                line-height: 20px;
+
+                @media (max-width: 1024px) {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+
+            .button-span {
+                display: flex;
+                gap: 5px;
+
+                span {
+                    color: var(--font-color2);
+                    @include font16;
+
+                    @media (max-width: 1024px) {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.air-cover-button, .still-questions-div {
+    button{
+        padding: 10px 17px;
+        background-color: transparent;
+        border-radius: 8px;
+        @include homeButton;
+        border: 1px solid var(--font-color);
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--bg-hover2);
+        }
+    }
+}

@@ -1,0 +1,163 @@
+@import "../../../styles/typography/typography";
+
+.air-cover {
+    margin-bottom: 80px;
+
+    .air-cover-content {
+        max-width: 804px;
+        margin: 0 auto;
+
+        @media (max-width: 1024px) {
+            max-width: none;
+        }
+
+        .air-cover-img {
+            display: flex;
+            justify-content: center;
+
+            @media (max-width: 1024px) {
+                justify-content: start;
+            }
+
+            img {
+                max-width: 180px;
+            }
+        }
+
+        h2 {
+            margin: 24px 0 64px 0;
+            text-align: center;
+            @include font40;
+            color: var(--font-color);
+
+            @media (max-width: 1024px) {
+                margin: 24px 0 40px 0;
+                text-align: left;
+                font-size: 36px;
+                line-height: 40px;
+            }
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+
+            thead {
+                tr {
+                    th {
+                        @include font22Table;
+                        color: var(--font-color);
+                        padding-bottom: 24px;
+                        min-width: 148px;
+
+                        @media (max-width: 1024px) {
+                            min-width: auto;
+                            max-width: 148px;
+                        }
+
+                        &:last-child {
+                            padding-left: 5px;
+
+                            @media (max-width: 1024px) {
+                                max-width: 280px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    border-top: 2px solid var(--border-button);
+
+                    th {
+                        @include footerHead;
+                        color: var(--font-color);
+                        text-align: left;
+                    }
+
+                    td {
+                        .host-right,
+                        .host-wrong {
+                            display: flex;
+                            justify-content: center;
+
+                            svg {
+                                stroke-width: 5.3px;
+                            }
+                        }
+
+                        .host-right {
+                            svg {
+                                stroke: var(--color-green);
+                            }
+                        }
+
+                        .host-wrong {
+                            svg {
+                                stroke: var(--color-red);
+                            }
+                        }
+                    }
+                }
+
+                .pera-table {
+                    border: none;
+
+                    td {
+                        padding-bottom: 24px;
+                        @include font16Line;
+                        color: var(--font-color2);
+
+                        @media (max-width: 1024px) {
+                            column-span: all;
+                        }
+
+                        &:last-of-type {
+                            @media (max-width: 1024px) {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        border-bottom: 2px solid var(--border-button);
+                    }
+                }
+
+                .list-table {
+                    border-top: 1px solid var(--border-button);
+
+                    th {
+                        @include font18;
+                    }
+                }
+            }
+        }
+
+        p {
+            margin: 24px 0 40px 0;
+            @include font16Line;
+            color: var(--font-color2);
+
+            @media (max-width: 1024px) {
+                margin: 24px 0 32px 0;
+            }
+
+            a {
+                color: var(--font-color);
+                font-weight: 500;
+                text-decoration-line: underline;
+            }
+        }
+
+        .air-cover-button {
+            display: flex;
+            justify-content: center;
+
+            @media (max-width: 1024px) {
+                justify-content: start;
+            }
+        }
+    }
+}

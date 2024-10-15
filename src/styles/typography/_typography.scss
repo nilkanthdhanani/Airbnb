@@ -1,4 +1,8 @@
 
+//1.5rem 24px
+//1.125rem 18px
+//1rem 16px
+
 @mixin font10 {
     font-size: 10px;
     line-height: 12px;
@@ -32,7 +36,19 @@
 
 @mixin font16Line {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 24px; 
+}
+
+@mixin font18 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+@mixin font18Line {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px; 
 }
 
 @mixin font20 {
@@ -40,10 +56,22 @@
     font-weight: 400;
 }
 
+@mixin font22 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 29px;
+}
+
 @mixin footerHead {
     font-size: 22px;
     font-weight: 500;
     line-height: 26px;
+}
+
+@mixin font22Table {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 25px;
 }
 
 @mixin sideHead {
@@ -62,6 +90,30 @@
     font-size: 32px;
     font-weight: 500;
     line-height: 36px;
+}
+
+@mixin font36 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+@mixin font40 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+}
+
+@mixin font48 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 52px;
+}
+
+@mixin font68 {
+    font-size: 68px;
+    font-weight: 500;
+    line-height: 68px;
 }
 
 @mixin font160 {

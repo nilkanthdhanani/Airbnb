@@ -12,8 +12,22 @@
     }
 }
 
+.container2 {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 80px;
+
+    @media (max-width: 1128px) {
+        padding: 0 40px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 24px;
+    }
+}
+
 .container-footer {
-    max-width: 1210px;
+    max-width: 1370px;
     margin: 0 auto;
     padding: 0 80px;
 

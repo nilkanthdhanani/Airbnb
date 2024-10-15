@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import './footer.scss';
+import React, { useEffect, useState } from 'react'
+import './yourHomeFooter.scss'
 import { NavLink } from 'react-router-dom';
-import WorldIco from '../../assets/images/svg/worldIco';
-import FacebookIco from '../../assets/images/svg/facebookIco';
-import TwitterIco from '../../assets/images/svg/twitterIco';
-import InstagramIco from '../../assets/images/svg/instagramIco';
-import Modal from '../../components/modal';
+import WorldIco from '../../../assets/images/svg/worldIco';
+import FacebookIco from '../../../assets/images/svg/facebookIco';
+import TwitterIco from '../../../assets/images/svg/twitterIco';
+import InstagramIco from '../../../assets/images/svg/instagramIco';
+import Modal from '../../../components/modal';
 
-export default function FooterList() {
+export default function YourHomeFooter() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [activeTab, setActiveTab] = useState('language');
 
@@ -31,8 +31,8 @@ export default function FooterList() {
     }, []);
 
     return (
-        <div className='footer-list'>
-            <div className="container-footer">
+        <div className='your-home-footer'>
+            <div className="container2">
                 <div className="footer-list-link">
                     <div className="footer-link-box">
                         <h3>Support</h3>
@@ -97,3 +97,4 @@ export default function FooterList() {
         </div>
     );
 }
+

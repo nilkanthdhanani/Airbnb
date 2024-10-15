@@ -1,0 +1,96 @@
+@import "../../../styles/typography/typography";
+
+.your-questions {
+    padding: 48px 0;
+    background-color: var(--bg-hover2);
+
+    @media (max-width: 1024px) {
+        padding: 64px 0;
+    }
+
+    .your-questions-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        h2 {
+            margin: 32px 0 48px 0;
+            @include font40;
+            font-weight: 600;
+            color: var(--font-color);
+
+            @media (max-width: 1024px) {
+                margin: 0 0 32px 0;
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 40px;
+            }
+
+            span {
+                display: block;
+            }
+        }
+
+        .your-questions-faq {
+            .faq-box {
+                padding: 16px 0;
+                border-bottom: 1px solid var(--border-button2);
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                .faq-box-main {
+                    cursor: pointer;
+                    padding: 16px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 16px;
+
+                    h3 {
+                        @include font22;
+                        color: var(--font-color);
+                    }
+
+                    svg {
+                        stroke-width: 4px;
+                        stroke: var(--font-color);
+                        transition: 0.3s ease-in-out;
+                    }
+                    
+                    .rotated {
+                        transition: 0.3s ease-in-out;
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .faq-content {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: 0.5s ease-in-out;
+                    
+                    &.open {
+                        max-height: 500px;
+                        transition: 0.5s ease-in-out;
+                    }
+
+                    p {
+                        @include font18;
+                        color: var(--font-color2);
+                    }
+
+                    a {
+                        @include font18;
+                        color: var(--font-color);
+                        font-weight: 500;
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -64,7 +64,7 @@ import vineYards from './sliderIcons/vineYards.webp';
 import windmills from './sliderIcons/windmills.webp';
 import yurts from './sliderIcons/yurts.webp';
 
-
+// others
 import mainBlock5 from './webp/mainBlock5.webp';
 import mainBlock6 from './webp/mainBlock6.webp';
 import past1 from './webp/past1.webp';
@@ -137,6 +137,11 @@ import placeIco27 from './webp/placeIco27.webp';
 import placeIco28 from './webp/placeIco28.webp';
 import placeIco29 from './webp/placeIco29.webp';
 import placeIco30 from './webp/placeIco30.webp';
+import airCoverLogo from './webp/airCoverLogo.webp';
+import airCoverLogoTeb from './webp/airCoverLogoTeb.webp';
+import questionsBg from './webp/questionsBg.webp';
+import questionsBgTeb from './webp/questionsBgTeb.webp';
+import setUpBg from './webp/setUpBg.webp';
 
 // slider cards
 import one1 from './card/1.webp';
@@ -207,7 +212,7 @@ import sixteen4 from './card/16.3.webp';
 export {
   adapted, aframes, arctic, barns, beach, beachfront, bedBreakfast, boats, cabins, camper, camping, casas, castles, caves, chefKitchen, container, countryside, creative, cycladic, dammusi, desert, design, domes, eartHomes, farms, golfing, hanoks, historicalHomes, houseBoat, huts, icons, islands, lake, lakeFront, luxe, mansions, minsus, nationalParks, newkey, offGrid, omg, pianos, play, pools, raids, rooms, ryokans, ski, skilling, surfing, tinyHomes, topCities, topWorld, tower, tranding, treeHouse, tropical, trulli, views, vineYards, windmills, yurts,
 
-  mainBlock6, past1, past2, past3, past4, past6, past7, past8, past9, past10, past11, past12, past13, past14, past15, past16, past5, kevin1, kevin2, kevin3, kevin4, train1, train2, train3, train4, mainBlock1, mainBlock2, mainBlock3, mainBlock4, mainBlock5, polly1, polly2, polly3, polly4, polly5, polly6, polly7, polly8, polly9, polly10, polly11, polly12, placeIco1, placeIco2, placeIco3, placeIco4, placeIco5, placeIco6, placeIco7, placeIco8, placeIco9, placeIco10, placeIco11, placeIco12, placeIco13, placeIco14, placeIco15, placeIco16, placeIco17, placeIco18, placeIco19, placeIco20, placeIco21, placeIco22, placeIco23, placeIco24, placeIco25, placeIco26, placeIco27, placeIco28, placeIco29, placeIco30,
+  mainBlock6, past1, past2, past3, past4, past6, past7, past8, past9, past10, past11, past12, past13, past14, past15, past16, past5, kevin1, kevin2, kevin3, kevin4, train1, train2, train3, train4, mainBlock1, mainBlock2, mainBlock3, mainBlock4, mainBlock5, polly1, polly2, polly3, polly4, polly5, polly6, polly7, polly8, polly9, polly10, polly11, polly12, placeIco1, placeIco2, placeIco3, placeIco4, placeIco5, placeIco6, placeIco7, placeIco8, placeIco9, placeIco10, placeIco11, placeIco12, placeIco13, placeIco14, placeIco15, placeIco16, placeIco17, placeIco18, placeIco19, placeIco20, placeIco21, placeIco22, placeIco23, placeIco24, placeIco25, placeIco26, placeIco27, placeIco28, placeIco29, placeIco30, airCoverLogo, airCoverLogoTeb, questionsBg, questionsBgTeb, setUpBg,
 
   one1, one2, one3, one4, two1, two2, two3, two4, three1, three2, three3, three4, four1, four2, four3, four4, five1, five2, five3, five4, six1, six2, six3, six4, seven1, seven2, seven3, seven4, eight1, eight2, eight3, eight4, nine1, nine2, nine3, nine4, ten1, ten2, ten3, ten4, eleven1, eleven2, eleven3, eleven4, twelve1, twelve2, twelve3, twelve4, thirteen1, thirteen2, thirteen3, thirteen4, fourteen1, fourteen2, fourteen3, fourteen4, fifteen1, fifteen2, fifteen3, fifteen4, sixteen1, sixteen2, sixteen3, sixteen4,
 };

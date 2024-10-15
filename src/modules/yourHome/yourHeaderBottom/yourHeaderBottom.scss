@@ -1,0 +1,49 @@
+@import "../../../styles/typography/_typography.scss";
+
+.your-hb {
+    display: none;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: var(--color-white);
+    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.2));
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    .your-hb-head {
+        padding-top: 8px;
+
+        span {
+            display: block;
+            text-align: center;
+            @include font16Line;
+            font-weight: 500;
+            line-height: 20px;
+            color: var(--font-color);
+        }
+    }
+
+    .your-hb-head.hidden {
+        display: none;
+    }
+
+    .your-hb-button {
+        padding: 12px 0 16px 0;
+        a {
+            padding: 12px 24px;
+            background: linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%);
+            border-radius: 8px;
+            @include font18Line;
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                margin-right: 4px;
+            }
+        }
+    }
+}

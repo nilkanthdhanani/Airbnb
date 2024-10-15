@@ -22,7 +22,7 @@ export default function DefaultLayout() {
       <main>
         <Outlet />
       </main>
-      {!hideHeaderAndFooter && <Footer />}
+      {!hideHeaderAndFooter && !hideHeader && <Footer />}
       {!hideHeader && <HeaderBottom />}
     </>
   );
