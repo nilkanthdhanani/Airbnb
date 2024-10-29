@@ -23,6 +23,10 @@
             border-bottom: 1px solid var(--border-button);
         }
 
+        @media (max-width: 576px) {
+            padding: 0;
+        }
+
         .footer-link-box {
             @media (max-width: 768px) {
                 padding: 24px 0;

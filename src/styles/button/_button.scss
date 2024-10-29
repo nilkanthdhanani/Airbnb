@@ -106,6 +106,10 @@ nav {
                 display: flex;
                 gap: 5px;
 
+                @media (max-width: 576px) {
+                    flex-wrap: wrap;
+                }
+
                 span {
                     color: var(--font-color2);
                     @include font12;
@@ -326,7 +330,11 @@ nav {
 
             .button-span {
                 display: flex;
-                gap: 5px;
+                align-items: center;
+
+                @media (max-width: 576px) {
+                    flex-wrap: wrap;
+                }
 
                 span {
                     color: var(--font-color2);
@@ -336,15 +344,22 @@ nav {
                         font-size: 14px;
                         line-height: 18px;
                     }
+                }
 
+                .dot {
+                    margin: 0 7px;
+                    padding: 2px;
+                    border-radius: 50%;
+                    background-color: var(--font-color2);
                 }
             }
         }
     }
 }
 
-.air-cover-button, .still-questions-div {
-    button{
+.air-cover-button,
+.still-questions-div {
+    button {
         padding: 10px 17px;
         background-color: transparent;
         border-radius: 8px;

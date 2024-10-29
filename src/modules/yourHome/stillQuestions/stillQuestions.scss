@@ -5,12 +5,20 @@
     background-color: var(--bg-hover2);
     border-bottom: 1px solid var(--border-button);
 
+    @media (max-width: 576px) {
+        padding-bottom: 40px;
+    }
+
     .still-questions-content {
         border-radius: 16px;
         overflow: hidden;
         background-color: var(--color-white);
         display: flex;
         align-items: center;
+
+        @media (max-width: 576px) {
+            flex-direction: column;
+        }
 
         .still-questions-img {
             flex: 1;

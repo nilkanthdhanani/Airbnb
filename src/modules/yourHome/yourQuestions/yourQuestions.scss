@@ -8,6 +8,10 @@
         padding: 64px 0;
     }
 
+    @media (max-width: 576px) {
+        padding: 40px 0;
+    }
+
     .your-questions-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -29,6 +33,10 @@
                 line-height: 40px;
             }
 
+            @media (max-width: 576px) {
+                margin: 0 0 24px 0;
+            }
+
             span {
                 display: block;
             }
@@ -46,9 +54,9 @@
                 .faq-box-main {
                     cursor: pointer;
                     padding: 16px 0;
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: 1fr 15px;
                     align-items: center;
-                    justify-content: space-between;
                     gap: 16px;
 
                     h3 {

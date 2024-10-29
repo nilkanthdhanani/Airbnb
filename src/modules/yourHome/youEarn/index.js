@@ -43,7 +43,7 @@ export default function YouEarn() {
                                     <p>Surat</p>
                                     <div className="button-span">
                                         <span>Entire place</span>
-                                        <span>•</span>
+                                        <div className="dot"></div>
                                         <span>2 bedrooms</span>
                                     </div>
                                 </div>
