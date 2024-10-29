@@ -278,12 +278,12 @@ nav {
     button {
         width: 100%;
         padding: 14px 24px;
-        background: linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%);
+        background: var(--bg-button);
         border: none;
         border-radius: 8px;
         font-size: 16px;
         font-weight: 500;
-        color: #fff;
+        color: var(--color-white);
         cursor: pointer;
     }
 }
